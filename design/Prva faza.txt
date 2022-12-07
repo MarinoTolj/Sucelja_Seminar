@@ -1,0 +1,76 @@
+Cilj:
+	artikulirati:
+			tko su korisnici, njihovi ključni zadaci
+Metode:
+	fokusiranost na zadatke
+	uključiv dizajn
+	fokus na korisnika
+Proizvod:
+	Opis korisnika i proizvoda
+Evaluacija!
+
+Cilj:
+	Roditelji za djecu/darovatelji ptica(gospođa Nevenka)
+	Kolekcionar(šjor Gogo)
+	Poslovni korisnici ptica(madžioničar Magic Mate)
+	Firma koja ih koristi za vjenčanja(Najam golubova i slično)
+
+	razveseliti bližnje
+	zabava
+	kolekcija/hobi
+	iznajmljivanje
+	poslovno
+	za očuvanje vrsta/uzgoj ptica
+	za istraživanje
+	
+Metode:
+	Omogućiti pregled ptica + klasifikacija
+	Jasan prikaz raspoloživih/neraspoloživih ptica
+	Kategorije/pretraživanje
+	Kupnja/obrada transakcija
+	Kontakt
+	Iznajmljivanje?
+	Povijest transakcija
+	Login(modal)
+	Korisnički profil
+	Forum?
+	Komentari i ocjene
+	šifre za popuste/promocije
+	reklame?
+	novosti/blog-nekakve vrste
+	Društvene mreže
+	Hrana za ptice/povezani proizvodi/krletke, ljuljačke
+	Shopping cart
+	Informacije za nove vlasnike ptica
+	Posebni dizajn po rijetkosti ptice
+	Live feed i snimka ptice?
+	Opis dostave
+	Navest cijenu
+	Popust na količinu ptica
+	Trenirane ptice - posebna kategorija
+	Certifikati za posebne ptice
+
+	Uključit nekoga sa strane da da ideje/ možda Jozo i Kristijan, Ivone za dizajn
+	
+	Jasno čitljivo
+	Dobar font, razumne boje
+	Responzivno
+	Ikone gdje je moguće
+	Velike, jasne slike
+	Izbor jezika?
+	Jasna navigacija
+	Pratit dobru praksu i principe
+	Max tri glavne boje
+	Nekakava poveznica između ptice i preporučenih proizvoda, npr krletka za papigu
+	
+Proizvod:
+	Opis korisnika - kupac ptice
+	Opis proizvoda - trgovina ptica
+
+
+Komentari::
+Search bar odma vidljiv i koristiv
+Pretraga po kategorijama
+LINKOVI na više razine kategorija/ slično file systemu
+Strelica koja vraća na vrh
+Košarica i prije logina
