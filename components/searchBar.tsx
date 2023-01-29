@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { LegacyRef, useEffect, useRef, useState } from "react";
-import { searchCategories } from "../types/searchCategories";
 import SearchIcon from "./icons/searchIcon";
 
 type PropType = {};
+const searchCategories = ["Birds", "Food", "Cages", "Other"];
 
 const SearchBar: React.FC<PropType> = (props) => {
   const [searchValue, setSearchValue] = useState("");
