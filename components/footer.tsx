@@ -3,7 +3,6 @@ import Icon from "@mdi/react";
 import { mdiFacebook, mdiInstagram, mdiWhatsapp } from "@mdi/js";
 
 const Footer: React.FC<PropType> = (props) => {
-  //TODO: fix footer position
   return (
     <footer className="bg-main-green-color h-36 mt-auto w-full">
       <p className="text-center text-2xl ">Contact Us!</p>

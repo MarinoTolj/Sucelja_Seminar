@@ -10,8 +10,11 @@ const SearchIcon = (props: { searchValue: string }) => {
     router.push;
   };
   return (
-    <Link href={`/AllCategories/${props.searchValue}`} className="bg-gray-300">
-      <Icon path={mdiMagnify} size={0.5} style={{ marginTop: "5 px" }} />
+    <Link
+      href={`/AllCategories/${props.searchValue}`}
+      className="bg-gray-300 w-9 flex justify-center items-center"
+    >
+      <Icon path={mdiMagnify} size={1} />
     </Link>
   );
 };

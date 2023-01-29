@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { LegacyRef, useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import SearchIcon from "./icons/searchIcon";
 
 type PropType = {};
@@ -21,18 +21,20 @@ const SearchBar: React.FC<PropType> = (props) => {
   };
 
   return (
-    <div className="flex self-center flex-col">
-      <div className="flex self-center">
-        <form onSubmit={handleSearch}>
+    <div className="flex self-center mb-2 w-full flex-col">
+      <div className="flex w-full self-center justify-center">
+        <form onSubmit={handleSearch} className="w-5/6 max-w-4xl">
           <input
             ref={inputRef}
             placeholder="Search"
             onChange={(e) => setSearchValue(e.currentTarget.value)}
             onClick={handleInputClick}
+            className="w-full h-9"
           />
         </form>
         <SearchIcon searchValue={searchValue} />
       </div>
+
       {userClicked >= 1 && document?.activeElement === inputRef.current && (
         <div className="bg-white flex flex-col border-solid border-gray-300 border-2 z-10">
           {searchCategories

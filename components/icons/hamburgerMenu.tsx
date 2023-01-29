@@ -4,7 +4,7 @@ import { mdiMenu } from "@mdi/js";
 const HamburgerMenu = () => {
   return (
     <div className="bg-hamburger-menu-backgorund">
-      <Icon path={mdiMenu} size={1.5} />
+      <Icon path={mdiMenu} size={2} />
     </div>
   );
 };

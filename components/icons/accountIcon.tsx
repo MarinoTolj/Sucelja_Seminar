@@ -6,7 +6,7 @@ type PropType = {};
 const AccountIcon: React.FC<PropType> = (props) => {
   return (
     <div className="flex-none order-0 flex-grow">
-      <Icon path={mdiAccountCircle} title="User Profile" size={1.5} />
+      <Icon path={mdiAccountCircle} title="User Profile" size={2} />
     </div>
   );
 };
