@@ -36,7 +36,7 @@ const SearchBar: React.FC<PropType> = (props) => {
       </div>
 
       {userClicked >= 1 && document?.activeElement === inputRef.current && (
-        <div className="bg-white flex flex-col border-solid border-gray-300 border-2 z-10">
+        <div className="bg-white flex flex-col border-solid border-gray-300 border-2 z-10 w-5/6 self-center max-w-4xl mr-9">
           {searchCategories
             .filter((category) =>
               category

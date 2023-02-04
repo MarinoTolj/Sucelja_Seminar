@@ -1,3 +1,9 @@
+import MobileCarousel from "../components/carousels/mobileCarousel";
+
 export default function Home() {
-  return <div>hello</div>;
+  return (
+    <div>
+      <MobileCarousel />
+    </div>
+  );
 }
