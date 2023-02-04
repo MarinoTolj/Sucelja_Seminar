@@ -4,8 +4,8 @@ import { useSwipeable } from "react-swipeable";
 
 type PropType = {};
 
-const width = "256";
-const height = "285";
+const width = "240";
+const height = "240";
 
 const MobileCarousel: React.FC<PropType> = (props) => {
   const [birdPhotos, setBirdPhotos] = useState([
@@ -51,7 +51,9 @@ const MobileCarousel: React.FC<PropType> = (props) => {
             alt={`Bird#${index + 1}`}
             width={width}
             height={height}
-            className="rounded-2xl"
+            className={`rounded-2xl mb-3 ${
+              index === 1 ? "drop-shadow-middlePhoto" : ""
+            }`}
           />
         );
       })}
