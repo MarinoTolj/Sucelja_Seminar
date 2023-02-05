@@ -42,7 +42,17 @@ const MobileCarousel: React.FC<PropType> = (props) => {
     >
       {birdPhotos.map((src, index) => {
         if (index > 2) {
-          return null;
+          return (
+            <Image
+              key={index}
+              src={src}
+              alt={`Bird#${index + 1}`}
+              width={width}
+              height={height}
+              className="hidden rounded-3xl mb-3"
+              loading="eager"
+            />
+          );
         }
         return (
           <Image
@@ -54,6 +64,7 @@ const MobileCarousel: React.FC<PropType> = (props) => {
             className={`rounded-2xl mb-3 ${
               index === 1 ? "drop-shadow-middlePhoto" : ""
             }`}
+            loading="eager"
           />
         );
       })}
