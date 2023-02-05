@@ -1,13 +1,8 @@
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
+import Photo from "../photo";
 
-type PropType = {};
-
-const width = "240";
-const height = "240";
-
-const MobileCarousel: React.FC<PropType> = (props) => {
+const MobileCarousel = () => {
   const [birdPhotos, setBirdPhotos] = useState([
     "/photos/Bird1.jpg",
     "/photos/Bird2.jpg",
@@ -43,19 +38,37 @@ const MobileCarousel: React.FC<PropType> = (props) => {
       {birdPhotos.map((src, index) => {
         if (index > 2) {
           return (
-            <Image
+            <Photo
               key={index}
               src={src}
               alt={`Bird#${index + 1}`}
-              width={width}
-              height={height}
-              className="hidden rounded-3xl mb-3"
+              className="hidden"
               loading="eager"
+              hidden
+              overlayText="Bird Name"
             />
           );
         }
         return (
-          <Image
+          <Photo
+            src={src}
+            key={index}
+            alt={`Bird#${index + 1}`}
+            className={`max-w-none h-80 ${
+              index === 1 ? "drop-shadow-middlePhoto" : ""
+            }`}
+            loading="eager"
+            overlayText="Bird Name"
+          />
+        );
+      })}
+    </div>
+  );
+};
+export default MobileCarousel;
+
+{
+  /* <Image
             key={index}
             src={src}
             alt={`Bird#${index + 1}`}
@@ -65,10 +78,5 @@ const MobileCarousel: React.FC<PropType> = (props) => {
               index === 1 ? "drop-shadow-middlePhoto" : ""
             }`}
             loading="eager"
-          />
-        );
-      })}
-    </div>
-  );
-};
-export default MobileCarousel;
+          /> */
+}
