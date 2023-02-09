@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const BackToTop: React.FC<PropType> = (props) => {
   const [visible, setVisible] = useState(false);
+
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
     if (scrolled > 300) {
@@ -28,7 +29,7 @@ const BackToTop: React.FC<PropType> = (props) => {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed flex justify-center items-center w-14 h-14 right-5  bottom-10 text-5xl z-10 cursor-pointer bg-main-green-color rounded-full border-2 border-gray-500"
+      className="fixed flex justify-center items-center w-14 h-14 right-5 bottom-10 text-5xl z-10 cursor-pointer bg-main-green-color rounded-full border-2 border-gray-500"
     >
       <Icon path={mdiArrowUpThin} size={4} className="" />
     </button>
