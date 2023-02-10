@@ -15,6 +15,7 @@ module.exports = {
         beige: "#E5CFCF",
         "text-overlay": "rgba(0, 0, 0, 0.5)",
         "dark-green": "#266442",
+        "hyperlink-blue": "#0969da",
       },
       dropShadow: {
         middlePhoto: "0px 4px 4px rgba(0, 0, 0, 0.75)",

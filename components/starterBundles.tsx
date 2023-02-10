@@ -11,6 +11,7 @@ const StarterBundles = () => {
           alt={`Bird1`}
           loading="eager"
           overlayText="Bird Name PARROT + CAGE + FOOD=500€"
+          clickable
         />
       </div>
     </div>

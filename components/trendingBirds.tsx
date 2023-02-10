@@ -9,12 +9,14 @@ const TrendingBirds = () => {
         alt={`Bird2`}
         loading="eager"
         overlayText="Bird Name"
+        clickable
       />
       <Photo
         src="/photos/Bird3.jpg"
         alt={`Bird3`}
         loading="eager"
         overlayText="Bird Name"
+        clickable
       />
     </div>
   );

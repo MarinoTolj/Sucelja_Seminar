@@ -1,16 +1,14 @@
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
+import {
+  birdNames,
+  birdPhotosPaths,
+  getBirdNameFromPath,
+} from "../../helpers/constants";
 import Photo from "../photo";
 
 const MobileCarousel = () => {
-  const [birdPhotos, setBirdPhotos] = useState([
-    "/photos/Bird1.jpg",
-    "/photos/Bird2.jpg",
-    "/photos/Bird3.jpg",
-    "/photos/Bird4.jpg",
-    "/photos/Bird5.jpg",
-    "/photos/Bird6.jpg",
-  ]);
+  const [birdPhotos, setBirdPhotos] = useState(birdPhotosPaths);
 
   const handlers = useSwipeable({
     onSwiped: (eventData) => {
@@ -45,7 +43,7 @@ const MobileCarousel = () => {
               className="hidden"
               loading="eager"
               hidden
-              overlayText="Bird Name"
+              overlayText="hidden"
             />
           );
         }
@@ -53,12 +51,13 @@ const MobileCarousel = () => {
           <Photo
             src={src}
             key={index}
-            alt={`Bird#${index + 1}`}
+            alt={`${getBirdNameFromPath(src)}`}
             className={`max-w-none h-80 ${
               index === 1 ? "drop-shadow-middlePhoto" : ""
             }`}
             loading="eager"
-            overlayText="Bird Name"
+            overlayText={`${getBirdNameFromPath(src)}`}
+            clickable={index === 1}
           />
         );
       })}
