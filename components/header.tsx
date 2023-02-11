@@ -1,12 +1,10 @@
 import Link from "next/link";
 import AccountIcon from "./icons/accountIcon";
 import HamburgerMenu from "./icons/hamburgerMenu";
-import ShoppingCart from "./icons/shoppingCart";
+import ShoppingCart from "./icons/shoppingCartIcon";
 import SearchBar from "./searchBar";
 
-type PropType = {};
-
-const Header: React.FC<PropType> = (props) => {
+const Header = () => {
   return (
     <header className="bg-main-green-color h-36 flex flex-col justify-between">
       <p className="text-center text-2xl">

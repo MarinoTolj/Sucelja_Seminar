@@ -6,12 +6,16 @@ import StarRating from "../../../components/icons/starRating";
 import Photo from "../../../components/photo";
 import { birdNames } from "../../../helpers/constants";
 
+import { useAppDispatch } from "../../../redux/hooks";
+import { addProduct } from "../../../redux/products";
+
 type PropType = {
   birdName: string;
+  setNumberOfItems: React.Dispatch<React.SetStateAction<number>>;
 };
 
 const BirdName: React.FC<PropType> = (props) => {
-  const router = useRouter();
+  const dispatch = useAppDispatch();
 
   return (
     <div className="flex gap-3 items-center flex-col mt-3">
@@ -31,14 +35,18 @@ const BirdName: React.FC<PropType> = (props) => {
       />
       <div className="self-start ml-3">
         <p>PRICE: 300€</p>
-        <p>
-          RATTING:
-          <span>
-            <StarRating rating={2} />
-          </span>
-        </p>
+        RATTING:
+        <StarRating rating={2} />
       </div>
-      <Button className="w-1/3 h-11">ADD TO CART</Button>
+
+      <Button
+        className="w-1/3 h-11 px-4"
+        onClick={() =>
+          dispatch(addProduct({ name: props.birdName, value: 300 }))
+        }
+      >
+        ADD TO CART
+      </Button>
     </div>
   );
 };
