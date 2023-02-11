@@ -23,7 +23,7 @@ const Photo: React.FC<
   return (
     <div className={`relative mb-3 ${props.hidden ? "hidden" : ""}`}>
       {clickable ? (
-        <Link href={`AllCategories/Birds/${getPath()}`}>
+        <Link href={`/AllCategories/Birds/${getPath()}`}>
           <Image
             {...props}
             width={photoWidth}

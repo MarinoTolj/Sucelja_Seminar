@@ -1,6 +1,8 @@
 import { GetStaticProps } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Button from "../../../components/button";
+import StarRating from "../../../components/icons/starRating";
 import Photo from "../../../components/photo";
 import { birdNames } from "../../../helpers/constants";
 
@@ -27,6 +29,16 @@ const BirdName: React.FC<PropType> = (props) => {
         alt={props.birdName}
         overlayText={props.birdName}
       />
+      <div className="self-start ml-3">
+        <p>PRICE: 300€</p>
+        <p>
+          RATTING:
+          <span>
+            <StarRating rating={2} />
+          </span>
+        </p>
+      </div>
+      <Button className="w-1/3 h-11">ADD TO CART</Button>
     </div>
   );
 };
