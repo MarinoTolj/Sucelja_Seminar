@@ -11,7 +11,7 @@ const Header = () => {
         <Link href="/">BuyBirds</Link>
       </p>
       <div className="flex items-start gap-3">
-        <AccountIcon />
+        <AccountIcon size={2} />
         <ShoppingCart />
         <HamburgerMenu />
       </div>

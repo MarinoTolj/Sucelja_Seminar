@@ -1,13 +1,16 @@
 import Icon from "@mdi/react";
 import { mdiAccountCircle } from "@mdi/js";
+import Link from "next/link";
 
-type PropType = {};
+type PropType = {
+  size: number;
+};
 
 const AccountIcon: React.FC<PropType> = (props) => {
   return (
-    <div className="flex-none order-0 flex-grow">
-      <Icon path={mdiAccountCircle} title="User Profile" size={2} />
-    </div>
+    <Link href="/Profile/4" className="flex-none order-0 flex-grow">
+      <Icon path={mdiAccountCircle} title="User Profile" size={props.size} />
+    </Link>
   );
 };
 export default AccountIcon;
