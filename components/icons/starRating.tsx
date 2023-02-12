@@ -9,7 +9,7 @@ type PropType = {
 
 const StarRating: React.FC<PropType> = (props) => {
   return (
-    <p className="flex">
+    <div className="flex">
       {Array.from({ length: numberOfStars }).map((_, index) => {
         if (index < props.rating) {
           return (
@@ -31,7 +31,7 @@ const StarRating: React.FC<PropType> = (props) => {
           );
         }
       })}
-    </p>
+    </div>
   );
 };
 export default StarRating;

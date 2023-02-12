@@ -3,7 +3,18 @@ import type { RootState } from "./store";
 
 export type ProductType = {
   name: string;
-  value: number;
+  price: number;
+  amount: number;
+};
+
+const findProductInArray = (product: ProductType, array: ProductType[]) => {
+  if (array.length === 0) return -1;
+  for (let i = 0; i < array.length; i++) {
+    if (product.name === array[i].name) {
+      return i;
+    }
+  }
+  return -1;
 };
 
 // declaring the types for our state
@@ -28,12 +39,23 @@ export const productsSlice = createSlice({
       state.value += action.payload;
     }, */
     addProduct: (state, action: PayloadAction<ProductType>) => {
-      state.products.push(action.payload);
+      const index = findProductInArray(action.payload, state.products);
+      if (index === -1) {
+        state.products.push(action.payload);
+      } else {
+        state.products[index].amount += action.payload.amount;
+      }
     },
     removeProduct: (state, action: PayloadAction<string>) => {
-      state.products = state.products.filter(
-        (product) => product.name !== action.payload
-      );
+      state.products = state.products.filter((product) => {
+        if (product.name !== action.payload) return product;
+
+        if (product.name === action.payload && product.amount > 1) {
+          product.amount--;
+          return product;
+        } else if (product.name === action.payload && product.amount === 1) {
+        }
+      });
     },
   },
 });

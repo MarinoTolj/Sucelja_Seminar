@@ -35,14 +35,16 @@ const BirdName: React.FC<PropType> = (props) => {
       />
       <div className="self-start ml-3">
         <p>PRICE: 300€</p>
-        RATTING:
-        <StarRating rating={2} />
+        <div className="flex gap-1">
+          RATING:
+          <StarRating rating={3} />
+        </div>
       </div>
 
       <Button
         className="w-1/3 h-11 px-4"
         onClick={() =>
-          dispatch(addProduct({ name: props.birdName, value: 300 }))
+          dispatch(addProduct({ name: props.birdName, price: 300, amount: 1 }))
         }
       >
         ADD TO CART

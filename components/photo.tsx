@@ -11,7 +11,7 @@ const Photo: React.FC<
   ImageProps & {
     clickable?: boolean;
     hidden?: boolean;
-    overlayText: string;
+    overlayText?: string;
     width?: string;
     height?: string;
   }
@@ -31,9 +31,11 @@ const Photo: React.FC<
             className={`${props.className} rounded-2xl cursor-pointer`}
             alt={props.alt}
           />
-          <div className="absolute bottom-0 z-10 text-white text-center bg-text-overlay min-w-full w-fit rounded-br-2xl rounded-bl-2xl">
-            {overlayText}
-          </div>
+          {overlayText && (
+            <div className="absolute bottom-0 z-10 text-white text-center bg-text-overlay min-w-full w-fit rounded-br-2xl rounded-bl-2xl">
+              {overlayText}
+            </div>
+          )}
         </Link>
       ) : (
         <>
