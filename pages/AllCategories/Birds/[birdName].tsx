@@ -11,7 +11,6 @@ import { addProduct } from "../../../redux/products";
 
 type PropType = {
   birdName: string;
-  setNumberOfItems: React.Dispatch<React.SetStateAction<number>>;
 };
 
 const BirdName: React.FC<PropType> = (props) => {

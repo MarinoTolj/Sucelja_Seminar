@@ -1,6 +1,5 @@
 import Image, { ImageProps } from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import {
   getBirdNameFromPath,
   photoHeight,
@@ -30,6 +29,11 @@ const Photo: React.FC<
             height={photoHeight}
             className={`${props.className} rounded-2xl cursor-pointer`}
             alt={props.alt}
+            style={{
+              height: `${
+                props.height === undefined ? "320px" : `${props.height}px`
+              }`,
+            }}
           />
           {overlayText && (
             <div className="absolute bottom-0 z-10 text-white text-center bg-text-overlay min-w-full w-fit rounded-br-2xl rounded-bl-2xl">
@@ -45,6 +49,11 @@ const Photo: React.FC<
             height={photoHeight}
             className={`${props.className} rounded-2xl`}
             alt={props.alt}
+            style={{
+              height: `${
+                props.height === undefined ? "320px" : `${props.height}px`
+              }`,
+            }}
           />
           <div className="absolute bottom-0 z-10 text-white text-center bg-text-overlay min-w-full w-fit rounded-br-2xl rounded-bl-2xl">
             {overlayText}

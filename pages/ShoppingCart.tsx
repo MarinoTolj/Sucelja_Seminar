@@ -29,6 +29,7 @@ const ShoppingCart: React.FC<PropType> = (props) => {
                     src={`/photos/${product.name}.jpg`}
                     alt={product.name}
                     clickable
+                    height="93"
                   />
                 </div>
                 <div className="flex flex-col">
