@@ -21,7 +21,7 @@ const SearchBar: React.FC<PropType> = (props) => {
   };
 
   return (
-    <div className="flex self-center mb-2 w-full flex-col">
+    <div className="flex self-center mb-2 w-full flex-col md:order-2 md:mb-0">
       <div className="flex w-full self-center justify-center">
         <form onSubmit={handleSearch} className="w-5/6 max-w-4xl">
           <input

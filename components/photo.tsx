@@ -12,15 +12,20 @@ const Photo: React.FC<
     hidden?: boolean;
     overlayText?: string;
     width?: string;
-    height?: string;
+    customHeight?: string;
+    divClassName?: string;
   }
-> = ({ overlayText, clickable, ...props }) => {
+> = ({ overlayText, clickable, divClassName, customHeight, ...props }) => {
   const getPath = () => {
     return getBirdNameFromPath(props.src as string);
   };
 
   return (
-    <div className={`relative mb-3 ${props.hidden ? "hidden" : ""}`}>
+    <div
+      className={` ${divClassName} relative mb-3 ${
+        props.hidden ? "hidden" : ""
+      }`}
+    >
       {clickable ? (
         <Link href={`/AllCategories/Birds/${getPath()}`}>
           <Image
@@ -31,7 +36,7 @@ const Photo: React.FC<
             alt={props.alt}
             style={{
               height: `${
-                props.height === undefined ? "320px" : `${props.height}px`
+                customHeight === undefined ? "320px" : `${customHeight}`
               }`,
             }}
           />

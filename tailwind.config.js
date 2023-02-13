@@ -20,6 +20,9 @@ module.exports = {
       dropShadow: {
         middlePhoto: "0px 4px 4px rgba(0, 0, 0, 0.75)",
       },
+      gridTemplateColumns: {
+        "2Cols": "minmax(0, 448px) 240px",
+      },
     },
   },
   plugins: [],

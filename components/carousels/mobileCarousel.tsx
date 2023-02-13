@@ -1,10 +1,6 @@
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
-import {
-  birdNames,
-  birdPhotosPaths,
-  getBirdNameFromPath,
-} from "../../helpers/constants";
+import { birdPhotosPaths, getBirdNameFromPath } from "../../helpers/constants";
 import Photo from "../photo";
 
 const MobileCarousel = () => {
@@ -30,7 +26,7 @@ const MobileCarousel = () => {
 
   return (
     <div
-      className="flex justify-center mt-3 overflow-hidden gap-3"
+      className="flex justify-center mt-3 overflow-hidden gap-3 md:hidden"
       {...handlers}
     >
       {birdPhotos.map((src, index) => {
@@ -65,17 +61,3 @@ const MobileCarousel = () => {
   );
 };
 export default MobileCarousel;
-
-{
-  /* <Image
-            key={index}
-            src={src}
-            alt={`Bird#${index + 1}`}
-            width={width}
-            height={height}
-            className={`rounded-2xl mb-3 ${
-              index === 1 ? "drop-shadow-middlePhoto" : ""
-            }`}
-            loading="eager"
-          /> */
-}
