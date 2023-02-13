@@ -2,8 +2,9 @@ import Photo from "../components/photo";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { addProduct, productsSelector, removeProduct } from "../redux/products";
 import Icon from "@mdi/react";
-import { mdiMinus, mdiPlus } from "@mdi/js";
+import { mdiMinus, mdiPlus, mdiEmoticonCryOutline } from "@mdi/js";
 import Button from "../components/button";
+import Link from "next/link";
 
 type PropType = {};
 
@@ -22,53 +23,63 @@ const ShoppingCart: React.FC<PropType> = (props) => {
       </h2>
       <div className="sm:m-auto sm:flex sm:justify-evenly sm:gap-2 sm:max-w-6xl">
         <div className="flex flex-col gap-10 sm:flex-grow lg:flex-grow-0">
-          {products.map((product, index) => {
-            return (
-              <>
-                <div className="mt-3 flex justify-between mx-2" key={index}>
-                  <div className="w-16 h-16">
-                    <Photo
-                      src={`/photos/${product.name}.jpg`}
-                      alt={product.name}
-                      clickable
-                      height="93"
-                    />
-                  </div>
-                  <div className="flex flex-col">
-                    <p className="text-2xl">{product.name}</p>
-                    <p className="font-semibold">{product.price}€</p>
-                    <div className="flex gap-2">
-                      Total:{" "}
-                      <p className="">{product.price * product.amount}€</p>
+          {products.length === 0 ? (
+            <div className="text-center flex flex-col items-center">
+              <Icon path={mdiEmoticonCryOutline} size={3} />
+              <p className=" mt-2">YOUR CART IS EMPTY.</p>
+              <Link href="/AllCategories/Birds" className="text-hyperlink-blue">
+                Continue shopping
+              </Link>
+            </div>
+          ) : (
+            products.map((product, index) => {
+              return (
+                <>
+                  <div className="mt-3 flex justify-between mx-2" key={index}>
+                    <div className="w-16 h-16">
+                      <Photo
+                        src={`/photos/${product.name}.jpg`}
+                        alt={product.name}
+                        clickable
+                        height="93"
+                      />
+                    </div>
+                    <div className="flex flex-col">
+                      <p className="text-2xl">{product.name}</p>
+                      <p className="font-semibold">{product.price}€</p>
+                      <div className="flex gap-2">
+                        Total:{" "}
+                        <p className="">{product.price * product.amount}€</p>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-1">
+                      <button
+                        onClick={() => dispatch(removeProduct(product.name))}
+                        className="border-2 border-black h-12 self-center"
+                      >
+                        <Icon path={mdiMinus} size={1} />
+                      </button>
+                      <p className="self-center text-center text-2xl border-2 border-gray-500 px-3 h-12 pt-1">
+                        {product.amount}
+                      </p>
+                      <button
+                        onClick={() =>
+                          dispatch(addProduct({ ...product, amount: 1 }))
+                        }
+                        className="border-2 border-black h-12 self-center"
+                      >
+                        <Icon path={mdiPlus} size={1} />
+                      </button>
                     </div>
                   </div>
-
-                  <div className="flex gap-1">
-                    <button
-                      onClick={() => dispatch(removeProduct(product.name))}
-                      className="border-2 border-black h-12 self-center"
-                    >
-                      <Icon path={mdiMinus} size={1} />
-                    </button>
-                    <p className="self-center text-center text-2xl border-2 border-gray-500 px-3 h-12 pt-1">
-                      {product.amount}
-                    </p>
-                    <button
-                      onClick={() =>
-                        dispatch(addProduct({ ...product, amount: 1 }))
-                      }
-                      className="border-2 border-black h-12 self-center"
-                    >
-                      <Icon path={mdiPlus} size={1} />
-                    </button>
-                  </div>
-                </div>
-                <hr className="bg-slate-600" />
-              </>
-            );
-          })}
+                  <hr className="bg-slate-600" />
+                </>
+              );
+            })
+          )}
         </div>
-        <div className="hidden mb-3  sm:block sm:border-l-2 sm:border-solid sm:border-main-green-color"></div>
+        <div className="hidden mb-3 sm:block sm:border-l-2 sm:border-solid sm:border-main-green-color"></div>
         <form className="flex flex-col w-3/4 mt-3 gap-3 max-w-xl m-auto sm:m-0 sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:max-h-80">
           <div className="flex flex-col">
             <label htmlFor="country" className="cursor-pointer">
