@@ -11,7 +11,7 @@ import {
 const Footer: React.FC<PropType> = (props) => {
   return (
     <footer className="bg-main-green-color h-36 mt-auto w-full relative md:justify-between">
-      <div className="md:absolute md:ml-0 md:mt-8 ">
+      <div className="md:absolute md:ml-0 md:mt-8">
         <p className="text-center text-2xl md:mb-3">Contact Us!</p>
         <div className="md:flex md:gap-2">
           <Icon path={mdiPhone} size={1} className="hidden md:block" />
@@ -40,7 +40,7 @@ const Footer: React.FC<PropType> = (props) => {
         <p className="text-center text-xs">Copyright @ Screws&Beers 2022</p>
         <p className="text-center text-xs">All rights reserved</p>
       </div>
-      <p className="hidden md:block md:absolute md:right-0 md:mt-14">
+      <p className="hidden md:block md:absolute md:right-0 md:mt-14 max-w-xl">
         BUYBIRDS
       </p>
     </footer>
