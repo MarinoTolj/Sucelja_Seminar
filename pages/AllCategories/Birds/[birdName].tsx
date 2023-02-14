@@ -46,7 +46,7 @@ const BirdName: React.FC<PropType> = (props) => {
           </div>
           <div className="items-center md:items-start md:flex md:flex-row-reverse md:gap-10">
             <Button
-              className="w-1/3 h-11 px-4 md:mt-0"
+              className="w-1/3 h-12 px-4 md:mt-0"
               onClick={() =>
                 dispatch(
                   addProduct({
