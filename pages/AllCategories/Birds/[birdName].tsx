@@ -1,6 +1,8 @@
+import { mdiMinus, mdiPlus } from "@mdi/js";
+import Icon from "@mdi/react";
 import { GetStaticProps } from "next";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useState } from "react";
 import Button from "../../../components/button";
 import StarRating from "../../../components/icons/starRating";
 import Photo from "../../../components/photo";
@@ -15,40 +17,74 @@ type PropType = {
 
 const BirdName: React.FC<PropType> = (props) => {
   const dispatch = useAppDispatch();
+  const [productAmount, setProductAmount] = useState(1);
 
   return (
-    <div className="flex gap-3 items-center flex-col mt-3">
-      <div className="">
-        <Link href="/AllCategories" className="text-hyperlink-blue font-bold">
+    <>
+      <div className="text-center">
+        <Link href="/AllCategories" className="text-dark-green font-bold">
           AllCategories
         </Link>
-        <Link href="/AllCategories/Birds" className="text-hyperlink-blue">
+        <Link href="/AllCategories/Birds" className="text-dark-green">
           /Birds
         </Link>
         <span>/{props.birdName}</span>
       </div>
-      <Photo
-        src={`/photos/${props.birdName}.jpg`}
-        alt={props.birdName}
-        overlayText={props.birdName}
-      />
-      <div className="self-start ml-3">
-        <p>PRICE: 300€</p>
-        <div className="flex gap-1">
-          RATING:
-          <StarRating rating={3} />
+      <div className="flex gap-3 items-center flex-col mt-3 md:flex-row md:m-auto md:gap-10">
+        <Photo
+          src={`/photos/${props.birdName}.jpg`}
+          alt={props.birdName}
+          overlayText={props.birdName}
+        />
+        <div className="flex items-center flex-col w-60 md:w-auto">
+          <div className="self-start md:mb-10">
+            <p>PRICE: 300€</p>
+            <div className="flex gap-1">
+              RATING:
+              <StarRating rating={3} />
+            </div>
+          </div>
+          <div className="items-center md:items-start md:flex md:flex-row-reverse md:gap-10">
+            <Button
+              className="w-1/3 h-11 px-4 md:mt-0"
+              onClick={() =>
+                dispatch(
+                  addProduct({
+                    name: props.birdName,
+                    price: 300,
+                    amount: productAmount,
+                  })
+                )
+              }
+            >
+              ADD TO CART
+            </Button>
+            <div className="flex gap-1 mb-16 justify-center">
+              <button
+                onClick={() => setProductAmount((prev) => prev - 1)}
+                className={`border-2 ${
+                  productAmount === 1
+                    ? "border-slate-500 text-slate-border-slate-500"
+                    : "border-dark-green"
+                } h-12 self-center`}
+                disabled={productAmount === 1}
+              >
+                <Icon path={mdiMinus} size={1} />
+              </button>
+              <p className="self-center text-center text-2xl border-2 border-main-green-color px-3 h-12 pt-1">
+                {productAmount}
+              </p>
+              <button
+                onClick={() => setProductAmount((prev) => prev + 1)}
+                className="border-2 border-dark-green h-12 self-center"
+              >
+                <Icon path={mdiPlus} size={1} />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-
-      <Button
-        className="w-1/3 h-11 px-4"
-        onClick={() =>
-          dispatch(addProduct({ name: props.birdName, price: 300, amount: 1 }))
-        }
-      >
-        ADD TO CART
-      </Button>
-    </div>
+    </>
   );
 };
 export default BirdName;

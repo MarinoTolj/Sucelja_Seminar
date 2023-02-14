@@ -15,7 +15,7 @@ const Birds: React.FC<PropType> = (props) => {
       <div className="sm:w-full sm:relative mt-2">
         <h2 className="text-center mb-3 text-lg">BIRDS</h2>
         <div className="mb-4 sm:absolute sm:left-0 sm:bottom-0 sm:ml-2">
-          <Link href="/AllCategories" className="text-hyperlink-blue font-bold">
+          <Link href="/AllCategories" className="text-dark-green font-bold">
             AllCategories
           </Link>
           <span>/Birds</span>

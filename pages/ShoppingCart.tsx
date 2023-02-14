@@ -27,7 +27,7 @@ const ShoppingCart: React.FC<PropType> = (props) => {
             <div className="text-center flex flex-col items-center">
               <Icon path={mdiEmoticonCryOutline} size={3} />
               <p className=" mt-2">YOUR CART IS EMPTY.</p>
-              <Link href="/AllCategories/Birds" className="text-hyperlink-blue">
+              <Link href="/AllCategories/Birds" className="text-dark-green">
                 Continue shopping
               </Link>
             </div>

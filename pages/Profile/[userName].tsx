@@ -10,13 +10,13 @@ const userName: React.FC<PropType> = (props) => {
       <div className="bg-beige flex pt-3 gap-12">
         <div className="flex flex-col items-center">
           <AccountIcon size={4} />
-          <Link href="#" className="">
+          <Link href="#" className="text-dark-green">
             Edit icon
           </Link>
         </div>
         <div>
           <p>PLACEHOLDER FOR USERNAME</p>
-          <Link href="#" className="text-2xl">
+          <Link href="#" className="text-2xl text-dark-green">
             Change Password
           </Link>
         </div>
