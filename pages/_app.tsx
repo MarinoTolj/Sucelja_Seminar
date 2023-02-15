@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import Head from "next/head";
 //@ts-ignore
 import { PersistGate } from "redux-persist/integration/react";
+import { Html } from "next/document";
 
 export default function App({ Component, pageProps }: AppProps) {
   const title = `${Component.name} | BuyBirds`;
@@ -16,6 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>{title}</title>
       </Head>
+
       <Provider store={store}>
         <PersistGate persistor={persistor}>
           <Header />
