@@ -26,9 +26,9 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
       {isHovered1 ? (
         <Photo
           src={birdPhotosPaths[0]}
-          alt={`${getBirdNameFromPath(birdPhotosPaths[0])}`}
+          alt={`GreenParrot`}
           clickable
-          overlayText={`${getBirdNameFromPath(birdPhotosPaths[0])}`}
+          overlayText={`Green Parrot`}
           divClassName="row-span-full max-w-md"
           className="w-full min-w-full"
           customHeight="100%"
@@ -36,9 +36,9 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
       ) : isHovered2 ? (
         <Photo
           src={birdPhotosPaths[1]}
-          alt={`${getBirdNameFromPath(birdPhotosPaths[1])}`}
+          alt={`WhiteParrot`}
           clickable
-          overlayText={`${getBirdNameFromPath(birdPhotosPaths[1])}`}
+          overlayText={`White Parrot`}
           divClassName="row-span-full max-w-md"
           className="w-full min-w-full"
           customHeight="100%"
@@ -46,9 +46,9 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
       ) : isHovered3 ? (
         <Photo
           src={birdPhotosPaths[2]}
-          alt={`${getBirdNameFromPath(birdPhotosPaths[2])}`}
+          alt={`Crow`}
           clickable
-          overlayText={`${getBirdNameFromPath(birdPhotosPaths[2])}`}
+          overlayText={`Crow`}
           divClassName="row-span-full max-w-md"
           className="w-full"
           customHeight="100%"
@@ -56,9 +56,9 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
       ) : isHovered4 ? (
         <Photo
           src={birdPhotosPaths[3]}
-          alt={`${getBirdNameFromPath(birdPhotosPaths[3])}`}
+          alt={`Robin`}
           clickable
-          overlayText={`${getBirdNameFromPath(birdPhotosPaths[3])}`}
+          overlayText={`Robin`}
           divClassName="row-span-full max-w-md"
           className="w-full"
           customHeight="100%"
@@ -66,9 +66,9 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
       ) : isHovered5 ? (
         <Photo
           src={birdPhotosPaths[4]}
-          alt={`${getBirdNameFromPath(birdPhotosPaths[4])}`}
+          alt={`Canary`}
           clickable
-          overlayText={`${getBirdNameFromPath(birdPhotosPaths[4])}`}
+          overlayText={`Canary`}
           divClassName="row-span-full max-w-md"
           className="w-full"
           customHeight="100%"
@@ -76,9 +76,9 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
       ) : isHovered6 ? (
         <Photo
           src={birdPhotosPaths[5]}
-          alt={`${getBirdNameFromPath(birdPhotosPaths[5])}`}
+          alt={`Eagle`}
           clickable
-          overlayText={`${getBirdNameFromPath(birdPhotosPaths[5])}`}
+          overlayText={`Eagle`}
           divClassName="row-span-full max-w-md"
           className="w-full"
           customHeight="100%"
@@ -86,9 +86,9 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
       ) : (
         <Photo
           src={birdPhotosPaths[0]}
-          alt={`${getBirdNameFromPath(birdPhotosPaths[0])}`}
+          alt={`GreenParrot`}
           clickable
-          overlayText={`${getBirdNameFromPath(birdPhotosPaths[0])}`}
+          overlayText={`Green Parrot`}
           divClassName="row-span-full max-w-md"
           className="w-full min-w-full"
           customHeight="100%"
@@ -98,9 +98,9 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
       <div ref={ref1}>
         <Photo
           src={birdPhotosPaths[0]}
-          alt={`Bird1`}
+          alt={`Green Parrot`}
           clickable
-          overlayText={`Bird1`}
+          overlayText={`Green Parrot`}
           customHeight="213px"
           divClassName="max-w-max"
         />
@@ -108,9 +108,9 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
       <div ref={ref2}>
         <Photo
           src={birdPhotosPaths[1]}
-          alt={`Bird1`}
+          alt={`White Parrot`}
           clickable
-          overlayText={`Bird1`}
+          overlayText={`White Parrot`}
           customHeight="213px"
           divClassName="max-w-max"
         />
@@ -118,9 +118,9 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
       <div ref={ref3}>
         <Photo
           src={birdPhotosPaths[2]}
-          alt={`Bird1`}
+          alt={`Crow`}
           clickable
-          overlayText={`Bird1`}
+          overlayText={`Crow`}
           customHeight="213px"
           divClassName="max-w-max"
         />
@@ -128,9 +128,9 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
       <div ref={ref4}>
         <Photo
           src={birdPhotosPaths[3]}
-          alt={`Bird1`}
+          alt={`Robin`}
           clickable
-          overlayText={`Bird1`}
+          overlayText={`Robin`}
           customHeight="213px"
           divClassName="max-w-max"
         />
@@ -138,9 +138,9 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
       <div ref={ref5}>
         <Photo
           src={birdPhotosPaths[4]}
-          alt={`Bird1`}
+          alt={`Canary`}
           clickable
-          overlayText={`Bird1`}
+          overlayText={`Canary`}
           customHeight="213px"
           divClassName="max-w-max"
         />
@@ -148,9 +148,9 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
       <div ref={ref6}>
         <Photo
           src={birdPhotosPaths[5]}
-          alt={`Bird1`}
+          alt={`Eagle`}
           clickable
-          overlayText={`Bird1`}
+          overlayText={`Eagle`}
           customHeight="213px"
           divClassName="max-w-max"
         />

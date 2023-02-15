@@ -28,7 +28,7 @@ const Photo: React.FC<
       }`}
     >
       {clickable ? (
-        <Link href={`/Birds/${getPath()}`}>
+        <Link href={`/Birds/${props.alt}`}>
           <Image
             {...props}
             width={photoWidth}

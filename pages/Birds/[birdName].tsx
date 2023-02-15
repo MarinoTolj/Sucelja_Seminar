@@ -26,7 +26,7 @@ const BirdName: React.FC<PropType> = (props) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <div className="text-center w-32 py-1 border-2 border-beige rounded-2xl m-auto text-lg bg-beige">
+      <div className="text-center py-1 border-2 border-beige rounded-2xl m-auto text-lg bg-beige w-fit px-2">
         <Link href="/Birds" className="text-dark-green font-bold underline">
           Birds
         </Link>
