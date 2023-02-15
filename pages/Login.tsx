@@ -39,7 +39,7 @@ export default function Login() {
         Forgot Password?
       </Link>
       <p>Don&apos;t have an account?</p>
-      <Link href="#" className="text-dark-green underline">
+      <Link href="/Register" className="text-dark-green underline">
         Click here!
       </Link>
     </div>

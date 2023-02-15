@@ -60,7 +60,7 @@ export default function Register() {
       </form>
 
       <p className="mt-5">Already have an account?</p>
-      <Link href="#" className="text-dark-green underline">
+      <Link href="/Login" className="text-dark-green underline">
         Click here!
       </Link>
     </div>
