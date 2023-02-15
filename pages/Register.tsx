@@ -47,9 +47,9 @@ export default function Register() {
         </div>
 
         <div className="flex flex-col mt-3">
-          {/* <label htmlFor="emailInput" className="cursor-pointer">
+          <label htmlFor="emailInput" className="cursor-pointer">
             Email
-          </label> */}
+          </label>
           <input
             type="email"
             id="emailInput"
