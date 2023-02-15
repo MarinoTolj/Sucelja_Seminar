@@ -5,14 +5,15 @@ import Button from "../components/button";
 export default function Register() {
   return (
     <div className="flex flex-col items-center text-center w-full md:w-3/4 mx-auto pb-48 md:bg-beige">
+      <h2 className="mt-5">REGISTRATION</h2>
       <form className="flex flex-col gap-3 w-3/4 max-w-md mt-16 text-left">
         <div className="flex flex-col">
-          <label htmlFor="email" className="cursor-pointer">
+          <label htmlFor="username" className="cursor-pointer">
             Username
           </label>
           <input
             type="text"
-            id="email"
+            id="username"
             placeholder="Username"
             className="p-1 border-2 border-solid border-slate-200 h-10 mt-1"
           />
@@ -43,11 +44,11 @@ export default function Register() {
         </div>
 
         <div className="flex flex-col mt-3">
-          <label htmlFor="password" className="cursor-pointer">
+          <label htmlFor="confirm-password" className="cursor-pointer">
             Confirm password
           </label>
           <input
-            id="password"
+            id="confirm-password"
             type="password"
             placeholder="Password"
             className="p-1 border-2 border-solid border-slate-200 h-10 mt-1"

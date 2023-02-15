@@ -5,6 +5,7 @@ import Button from "../components/button";
 export default function Login() {
   return (
     <div className="flex flex-col items-center text-center w-full md:w-3/4 mx-auto pb-48 md:bg-beige">
+      <h2 className="mt-5">LOGIN</h2>
       <form className="flex flex-col gap-3 w-3/4 max-w-md mt-16 text-left">
         <div className="flex flex-col">
           <label htmlFor="email" className="cursor-pointer">
