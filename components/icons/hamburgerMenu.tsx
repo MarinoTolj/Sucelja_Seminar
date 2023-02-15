@@ -13,7 +13,7 @@ const HamburgerMenu = () => {
 
   return (
     <nav className="bg-hamburger-menu-background flex items-center text-center relative md:hidden">
-      <button onClick={toggleHamburger}>
+      <button onClick={toggleHamburger} aria-label="menu">
         <Icon path={mdiMenu} size={2} />
       </button>
       {toggleHamburgerMenu && (
