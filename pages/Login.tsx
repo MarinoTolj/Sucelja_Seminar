@@ -29,7 +29,7 @@ export default function Login() {
         <title>Login | BuyBirds</title>
       </Head>
       <div className="flex flex-col items-center text-center w-full md:w-3/4 mx-auto pb-48 md:bg-beige">
-        <h2 className="mt-5">LOGIN</h2>
+        <h2 className="mt-5 text-lg font-semibold">Log in to buy birds!</h2>
         <form
           className="flex flex-col gap-3 w-3/4 max-w-md mt-16 text-left"
           onSubmit={handleLogin}

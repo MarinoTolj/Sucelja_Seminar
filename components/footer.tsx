@@ -7,6 +7,8 @@ import {
   mdiPhone,
   mdiWhatsapp,
 } from "@mdi/js";
+import Link from "next/link";
+import Image from "next/image";
 
 const Footer: React.FC<PropType> = (props) => {
   return (
@@ -44,9 +46,20 @@ const Footer: React.FC<PropType> = (props) => {
           All rights reserved
         </p>
       </div>
-      <p className="hidden md:block md:absolute md:right-0 md:mt-14 max-w-xl">
-        BUYBIRDS
-      </p>
+      <div className="hidden md:block md:absolute md:right-0 max-w-xl md:w-40 md:h-10">
+        <Link
+          href="/"
+          className="absolute text-center left-1/3 md:order-0 md:static"
+        >
+          <Image
+            src="/photos/Logo.png"
+            alt="Logo"
+            className="w-1 md:w-36 bg-cover"
+            width={200}
+            height={100}
+          />
+        </Link>
+      </div>
     </footer>
   );
 };

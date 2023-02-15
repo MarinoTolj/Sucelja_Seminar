@@ -35,7 +35,7 @@ export default function Register() {
         <title>Register | BuyBirds</title>
       </Head>
       <div className="flex flex-col items-center text-center w-full md:w-3/4 mx-auto pb-48 md:bg-beige">
-        <h2 className="mt-5">REGISTRATION</h2>
+        <h2 className="mt-5 text-lg font-semibold">Create your account!</h2>
         <form
           className="flex flex-col gap-3 w-3/4 max-w-md mt-16 text-left"
           onSubmit={handleRegistration}
