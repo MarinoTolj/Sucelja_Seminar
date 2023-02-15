@@ -15,6 +15,10 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>{title}</title>
+        <meta
+          name="description"
+          content="Your number one Bird store in Europe. Would you kindly buy here"
+        />
       </Head>
 
       <Provider store={store}>

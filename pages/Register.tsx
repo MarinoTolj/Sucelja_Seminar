@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import Button from "../components/button";
 import { useAppDispatch } from "../redux/hooks";
@@ -10,6 +11,7 @@ export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmedPassword, setConfirmedPassword] = useState("");
+  const router = useRouter();
 
   const handleRegistration = (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,6 +25,7 @@ export default function Register() {
         isLoggedIn: false,
       })
     );
+    router.push("/Login");
   };
 
   return (

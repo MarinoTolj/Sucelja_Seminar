@@ -73,6 +73,7 @@ const BirdName: React.FC<PropType> = (props) => {
                     : "bg-dark-green border-dark-green"
                 } h-12 self-center`}
                 disabled={productAmount === 1}
+                aria-label="reduce-product-amount-by-one"
               >
                 <Icon path={mdiMinus} size={1} />
               </button>
@@ -82,6 +83,7 @@ const BirdName: React.FC<PropType> = (props) => {
               <button
                 onClick={() => setProductAmount((prev) => prev + 1)}
                 className="border-2 bg-dark-green text-white border-dark-green h-12 self-center rounded-br-2xl rounded-tr-2xl"
+                aria-label="add-product-amount-by-one"
               >
                 <Icon path={mdiPlus} size={1} />
               </button>
