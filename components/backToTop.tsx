@@ -30,6 +30,7 @@ const BackToTop: React.FC<PropType> = (props) => {
     <button
       onClick={scrollToTop}
       className="fixed flex justify-center items-center w-14 h-14 right-5 bottom-20 text-5xl z-10 cursor-pointer bg-main-green-color rounded-full border-2 border-gray-500"
+      aria-label="back-to-top-button"
     >
       <Icon path={mdiArrowUpThin} size={4} />
     </button>

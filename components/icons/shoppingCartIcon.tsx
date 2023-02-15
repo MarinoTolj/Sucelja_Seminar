@@ -8,7 +8,11 @@ import { productsSelector } from "../../redux/products";
 const ShoppingCartIcon = () => {
   const products = useAppSelector(productsSelector);
   return (
-    <Link href="/ShoppingCart" className="relative">
+    <Link
+      href="/ShoppingCart"
+      className="relative"
+      aria-label="shopping-cart-icon"
+    >
       <Icon path={mdiCart} size={2} />
 
       {products.length > 0 && (

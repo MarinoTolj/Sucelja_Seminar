@@ -48,13 +48,14 @@ const ShoppingCart: React.FC<PropType> = (props) => {
                       <p className="text-2xl">{product.name}</p>
                       <p className="font-semibold">{product.price}€</p>
                       <div className="flex gap-2">
-                        Total:{" "}
+                        Total:
                         <p className="">{product.price * product.amount}€</p>
                       </div>
                     </div>
 
                     <div className="flex gap-1">
                       <button
+                        aria-label="reduce-product-amount-by-one"
                         onClick={() => dispatch(removeProduct(product.name))}
                         className={`border-2 rounded-bl-2xl  text-white rounded-tl-2xl ${
                           product.amount === 1
@@ -69,6 +70,7 @@ const ShoppingCart: React.FC<PropType> = (props) => {
                         {product.amount}
                       </p>
                       <button
+                        aria-label="add-product-amount-by-one"
                         onClick={() =>
                           dispatch(addProduct({ ...product, amount: 1 }))
                         }

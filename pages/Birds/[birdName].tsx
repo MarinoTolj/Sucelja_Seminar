@@ -19,7 +19,7 @@ type PropType = {
 const BirdName: React.FC<PropType> = (props) => {
   const dispatch = useAppDispatch();
   const [productAmount, setProductAmount] = useState(1);
-  const title = `${props.birdName}} | BuyBirds`;
+  const title = `${props.birdName} | BuyBirds`;
 
   return (
     <>

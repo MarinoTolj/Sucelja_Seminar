@@ -13,6 +13,7 @@ const SearchIcon = (props: { searchValue: string }) => {
     <Link
       href={`/${props.searchValue}`}
       className="bg-gray-300 w-9 flex justify-center items-center"
+      aria-label="shopping-cart-icon"
     >
       <Icon path={mdiMagnify} size={1} />
     </Link>
