@@ -5,6 +5,7 @@ import Icon from "@mdi/react";
 import { mdiMinus, mdiPlus, mdiEmoticonCryOutline } from "@mdi/js";
 import Button from "../components/button";
 import Link from "next/link";
+import Head from "next/head";
 
 type PropType = {};
 
@@ -13,6 +14,9 @@ const ShoppingCart: React.FC<PropType> = (props) => {
   const dispatch = useAppDispatch();
   return (
     <>
+      <Head>
+        <title>Shopping cart | BuyBirds</title>
+      </Head>
       <h2 className="text-center mt-4 text-xl">
         Your Total:
         {products.reduce(

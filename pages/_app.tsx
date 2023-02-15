@@ -10,11 +10,10 @@ import Head from "next/head";
 import { PersistGate } from "redux-persist/integration/react";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const title = `${Component.name} | BuyBirds`;
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>BuyBirds</title>
         <meta
           name="description"
           content="Your number one Bird store in Europe. Would you kindly buy here"
