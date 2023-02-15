@@ -21,7 +21,13 @@ const HamburgerMenu = () => {
           <button onClick={() => setToggleHamburgerMenu((prev) => !prev)}>
             <Icon path={mdiBackburger} size={2} />
           </button>
-
+          <Link href={`/Login`} onClick={toggleHamburger}>
+            Login
+          </Link>
+          <hr />
+          <Link href={`/Register`} onClick={toggleHamburger}>
+            Register
+          </Link>
           <hr />
           {searchCategories.map((category, index) => (
             <>

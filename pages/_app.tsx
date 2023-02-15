@@ -6,10 +6,14 @@ import BackToTop from "../components/backToTop";
 import { useState } from "react";
 import { store } from "../redux/store";
 import { Provider } from "react-redux";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Head>
+        <title>{Component.name}</title>
+      </Head>
       <Provider store={store}>
         <Header />
         <Component {...pageProps} />

@@ -10,6 +10,12 @@ const NavCategories: React.FC<PropType> = (props) => {
       <Link href="/">
         <Button className="w-20 h-10">Home</Button>
       </Link>
+      <Link href="/Login">
+        <Button className="w-20 h-10">Login</Button>
+      </Link>
+      <Link href="/Register">
+        <Button className="w-20 h-10">Register</Button>
+      </Link>
       {searchCategories.map((category, index) => (
         <Link href={`/${category}`} key={index}>
           <Button key={index} className="w-20 h-10">

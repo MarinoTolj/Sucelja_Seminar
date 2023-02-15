@@ -1,6 +1,7 @@
 import { mdiMinus, mdiPlus } from "@mdi/js";
 import Icon from "@mdi/react";
 import { GetStaticProps } from "next";
+import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
 import Button from "../../components/button";
@@ -21,8 +22,11 @@ const BirdName: React.FC<PropType> = (props) => {
 
   return (
     <>
+      <Head>
+        <title>{props.birdName}</title>
+      </Head>
       <div className="text-center">
-        <Link href="/Birds" className="text-dark-green font-bold">
+        <Link href="/Birds" className="text-dark-green font-bold underline">
           Birds
         </Link>
         <span>/{props.birdName}</span>
