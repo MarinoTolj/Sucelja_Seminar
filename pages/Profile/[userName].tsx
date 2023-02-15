@@ -55,20 +55,22 @@ const UserName: React.FC<PropType> = (props) => {
         <title>{title}</title>
       </Head>
       <h2 className="text-center pt-3 text-2xl bg-beige">MY DASHBOARD</h2>
-      <div className="bg-beige flex pt-3 gap-12">
-        <div className="flex flex-col items-center">
-          <AccountIcon size={4} />
+      <div className="bg-beige pt-3 flex justify-between relative">
+        <div className="flex flex-col items-center mr-auto mb-5">
+          <div>
+            <AccountIcon size={4} />
+          </div>
           <Link href="#" className="text-dark-green underline">
             Edit icon
           </Link>
         </div>
-        <div>
+        <div className="absolute left-1/2 right-1/2 w-1/2 flex flex-col">
           <p>{user.name}</p>
-          <Link href="#" className="text-2xl text-dark-green underline">
+          <Link href="#" className="text-xl text-dark-green underline">
             Change Password
           </Link>
           <Button
-            className="w-1/2 h-10"
+            className="w-32 h-10"
             onClick={() => dispatch(logoutUser(user.name))}
           >
             Log out

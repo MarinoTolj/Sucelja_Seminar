@@ -37,8 +37,12 @@ const Footer: React.FC<PropType> = (props) => {
         </div>
       </div>
       <div className="absolute bottom-0 flex gap-3 bg-dark-green w-full justify-center">
-        <p className="text-center text-xs">Copyright @ Screws&Beers 2022</p>
-        <p className="text-center text-xs">All rights reserved</p>
+        <p className="text-center text-xs text-light-green">
+          Copyright @ Screws&Beers 2022
+        </p>
+        <p className="text-center text-xs text-light-green">
+          All rights reserved
+        </p>
       </div>
       <p className="hidden md:block md:absolute md:right-0 md:mt-14 max-w-xl">
         BUYBIRDS
