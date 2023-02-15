@@ -17,7 +17,7 @@ const SearchBar: React.FC<PropType> = (props) => {
   useOnClickOutside(dropdownRef, () => setUserClicked(0));
 
   const handleSearch = () => {
-    router.push(`/AllCategories/${searchValue}`);
+    router.push(`/${searchValue}`);
   };
 
   const handleInputClick = () => {
@@ -51,11 +51,7 @@ const SearchBar: React.FC<PropType> = (props) => {
                 .startsWith(searchValue.toLocaleLowerCase())
             )
             .map((category, index) => (
-              <Link
-                key={index}
-                href={`/AllCategories/${category}`}
-                className="text-center"
-              >
+              <Link key={index} href={`/${category}`} className="text-center">
                 <button>{category}</button>
               </Link>
             ))}

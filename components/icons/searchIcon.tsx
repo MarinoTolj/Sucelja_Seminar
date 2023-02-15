@@ -11,7 +11,7 @@ const SearchIcon = (props: { searchValue: string }) => {
   };
   return (
     <Link
-      href={`/AllCategories/${props.searchValue}`}
+      href={`/${props.searchValue}`}
       className="bg-gray-300 w-9 flex justify-center items-center"
     >
       <Icon path={mdiMagnify} size={1} />

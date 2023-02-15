@@ -16,14 +16,14 @@ const Categories: React.FC<PropType> = (props) => {
           overlayText="VIEW BIRDS"
           clickable
         />
-        <Link href="/AllCategories/Accessories">
+        <Link href="/Accessories">
           <Photo
             src="/photos/BirdCage.jpg"
             alt="BirdCage"
             overlayText="VIEW BIRD ACCESSORIES"
           />
         </Link>
-        <Link href="/AllCategories/Food">
+        <Link href="/Food">
           <Photo
             src="/photos/BirdFood.jpg"
             alt="BirdFood"

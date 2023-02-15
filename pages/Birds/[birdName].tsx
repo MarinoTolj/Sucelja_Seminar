@@ -3,13 +3,13 @@ import Icon from "@mdi/react";
 import { GetStaticProps } from "next";
 import Link from "next/link";
 import { useState } from "react";
-import Button from "../../../components/button";
-import StarRating from "../../../components/icons/starRating";
-import Photo from "../../../components/photo";
-import { birdNames } from "../../../helpers/constants";
+import Button from "../../components/button";
+import StarRating from "../../components/icons/starRating";
+import Photo from "../../components/photo";
+import { birdNames } from "../../helpers/constants";
 
-import { useAppDispatch } from "../../../redux/hooks";
-import { addProduct } from "../../../redux/products";
+import { useAppDispatch } from "../../redux/hooks";
+import { addProduct } from "../../redux/products";
 
 type PropType = {
   birdName: string;
@@ -22,11 +22,8 @@ const BirdName: React.FC<PropType> = (props) => {
   return (
     <>
       <div className="text-center">
-        <Link href="/AllCategories" className="text-dark-green font-bold">
-          AllCategories
-        </Link>
-        <Link href="/AllCategories/Birds" className="text-dark-green">
-          /Birds
+        <Link href="/Birds" className="text-dark-green font-bold">
+          Birds
         </Link>
         <span>/{props.birdName}</span>
       </div>

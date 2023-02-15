@@ -12,7 +12,7 @@ const HamburgerMenu = () => {
   };
 
   return (
-    <div className="bg-hamburger-menu-background flex items-center relative">
+    <nav className="bg-hamburger-menu-background flex items-center relative md:hidden">
       <button onClick={toggleHamburger}>
         <Icon path={mdiMenu} size={2} />
       </button>
@@ -21,17 +21,11 @@ const HamburgerMenu = () => {
           <button onClick={() => setToggleHamburgerMenu((prev) => !prev)}>
             <Icon path={mdiBackburger} size={2} />
           </button>
-          <Link href="/AllCategories" onClick={toggleHamburger}>
-            All categories
-          </Link>
+
           <hr />
           {searchCategories.map((category, index) => (
             <>
-              <Link
-                href={`/AllCategories/${category}`}
-                onClick={toggleHamburger}
-                key={index}
-              >
+              <Link href={`/${category}`} onClick={toggleHamburger} key={index}>
                 {category}
               </Link>
               <hr key={index + searchCategories.length} />
@@ -39,7 +33,7 @@ const HamburgerMenu = () => {
           ))}
         </aside>
       )}
-    </div>
+    </nav>
   );
 };
 export default HamburgerMenu;

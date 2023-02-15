@@ -2,11 +2,12 @@ import Link from "next/link";
 import AccountIcon from "./icons/accountIcon";
 import HamburgerMenu from "./icons/hamburgerMenu";
 import ShoppingCart from "./icons/shoppingCartIcon";
+import NavCategories from "./navCategories";
 import SearchBar from "./searchBar";
 
 const Header = () => {
   return (
-    <header className="bg-main-green-color h-36 flex flex-col justify-between md:flex-row md:items-center">
+    <header className="bg-main-green-color h-36 flex flex-col justify-between md:flex-row md:items-center md:relative">
       <p className="text-center text-2xl md:order-1">
         <Link href="/">BuyBirds</Link>
       </p>
@@ -16,6 +17,7 @@ const Header = () => {
         <HamburgerMenu />
       </div>
       <SearchBar />
+      <NavCategories />
     </header>
   );
 };
