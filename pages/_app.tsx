@@ -3,10 +3,11 @@ import type { AppProps } from "next/app";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import BackToTop from "../components/backToTop";
-import { useState } from "react";
-import { store } from "../redux/store";
+import { persistor, store } from "../redux/store";
 import { Provider } from "react-redux";
 import Head from "next/head";
+//@ts-ignore
+import { PersistGate } from "redux-persist/integration/react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const title = `${Component.name} | BuyBirds`;
@@ -16,10 +17,12 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>{title}</title>
       </Head>
       <Provider store={store}>
-        <Header />
-        <Component {...pageProps} />
-        <BackToTop />
-        <Footer />
+        <PersistGate persistor={persistor}>
+          <Header />
+          <Component {...pageProps} />
+          <BackToTop />
+          <Footer />
+        </PersistGate>
       </Provider>
     </>
   );

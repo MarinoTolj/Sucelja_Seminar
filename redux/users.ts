@@ -24,7 +24,9 @@ export type UsersType = {
 };
 
 const initialState: UsersType = {
-  users: [],
+  users: [
+    { name: "Mate", email: "mate@matic", password: "mate", isLoggedIn: false },
+  ],
 };
 
 export const usersSlice = createSlice({
@@ -58,6 +60,12 @@ export const usersSlice = createSlice({
         }
       }
     },
+    logoutUser: (state, action: PayloadAction<string>) => {
+      const userIndex = findUserByName(action.payload, state.users);
+      if (userIndex > -1) {
+        state.users[userIndex].isLoggedIn = false;
+      }
+    },
 
     /* removeProduct: (state, action: PayloadAction<string>) => {
       state.products = state.products.filter((product) => {
@@ -75,7 +83,8 @@ export const usersSlice = createSlice({
 // Here we are just exporting the actions from this slice, so that we can call them anywhere in our app.
 export const {
   addUser,
-  loginUser /* removeProduct */ /* incrementByAmount,  */,
+  loginUser,
+  logoutUser /* removeProduct */ /* incrementByAmount,  */,
 } = usersSlice.actions;
 
 // calling the above actions would be useless if we could not access the data in the state. So, we use something called a selector which allows us to select a value from the state.

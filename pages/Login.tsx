@@ -9,7 +9,6 @@ export default function Login() {
   const dispatch = useAppDispatch();
   const [userNameEmail, setUserNameEmail] = useState("");
   const [password, setPassword] = useState("");
-  const users = useAppSelector(usersSelector);
   const router = useRouter();
 
   const handleLogin = (e: React.FormEvent) => {

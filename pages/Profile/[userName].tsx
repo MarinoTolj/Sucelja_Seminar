@@ -2,13 +2,21 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import Button from "../../components/button";
 import AccountIcon from "../../components/icons/accountIcon";
-import { useAppSelector } from "../../redux/hooks";
-import { usersSelector, UserType } from "../../redux/users";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { logoutUser, usersSelector, UserType } from "../../redux/users";
 
 type PropType = {};
 
-const findUserByName = (name: string, users: UserType[]) => {
+const findUserByName = (name: string | undefined, users: UserType[]) => {
+  if (name === undefined)
+    return {
+      name: "",
+      email: "",
+      isLoggedIn: false,
+      password: "",
+    };
   for (let i = 0; i < users.length; i++) {
     if (name === users[i].name && users[i].isLoggedIn) {
       return users[i];
@@ -27,8 +35,13 @@ const UserName: React.FC<PropType> = (props) => {
     password: "",
   });
   const title = `${user.name} | BuyBirds`;
+  const dispatch = useAppDispatch();
+
   useEffect(() => {
-    const user = findUserByName(router.query.userName as string, users);
+    const user = findUserByName(
+      router.query.userName as string | undefined,
+      users
+    );
     if (user) {
       setUser(user);
     } else {
@@ -54,6 +67,12 @@ const UserName: React.FC<PropType> = (props) => {
           <Link href="#" className="text-2xl text-dark-green underline">
             Change Password
           </Link>
+          <Button
+            className="w-1/2 h-10"
+            onClick={() => dispatch(logoutUser(user.name))}
+          >
+            Log out
+          </Button>
         </div>
       </div>
       <div>
