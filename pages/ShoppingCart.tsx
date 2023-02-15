@@ -56,10 +56,10 @@ const ShoppingCart: React.FC<PropType> = (props) => {
                     <div className="flex gap-1">
                       <button
                         onClick={() => dispatch(removeProduct(product.name))}
-                        className={`border-2 ${
+                        className={`border-2 rounded-bl-2xl  text-white rounded-tl-2xl ${
                           product.amount === 1
-                            ? "border-slate-500 text-slate-border-slate-500"
-                            : "border-dark-green"
+                            ? "bg-slate-500 border-slate-500"
+                            : "bg-dark-green border-dark-green"
                         } h-12 self-center`}
                         disabled={product.amount === 1}
                       >
@@ -72,7 +72,7 @@ const ShoppingCart: React.FC<PropType> = (props) => {
                         onClick={() =>
                           dispatch(addProduct({ ...product, amount: 1 }))
                         }
-                        className="border-2 border-dark-green h-12 self-center"
+                        className="border-2 bg-dark-green text-white border-dark-green h-12 self-center rounded-br-2xl rounded-tr-2xl"
                       >
                         <Icon path={mdiPlus} size={1} />
                       </button>

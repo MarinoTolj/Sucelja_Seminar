@@ -26,7 +26,7 @@ const BirdName: React.FC<PropType> = (props) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <div className="text-center">
+      <div className="text-center w-32 py-1 border-2 border-beige rounded-2xl m-auto text-lg bg-beige">
         <Link href="/Birds" className="text-dark-green font-bold underline">
           Birds
         </Link>
@@ -40,9 +40,12 @@ const BirdName: React.FC<PropType> = (props) => {
         />
         <div className="flex items-center flex-col w-60 md:w-auto">
           <div className="self-start md:mb-10">
-            <p>PRICE: 300€</p>
-            <div className="flex gap-1">
-              RATING:
+            <p className="hidden md:block mb-5 text-5xl font-extrabold">
+              {props.birdName}
+            </p>
+            <p className="mb-5 text-lg">Price: 300€</p>
+            <div className="flex gap-1 text-lg">
+              Rating:
               <StarRating rating={3} />
             </div>
           </div>
@@ -64,10 +67,10 @@ const BirdName: React.FC<PropType> = (props) => {
             <div className="flex gap-1 mb-16 justify-center">
               <button
                 onClick={() => setProductAmount((prev) => prev - 1)}
-                className={`border-2 ${
+                className={`border-2 rounded-bl-2xl  text-white rounded-tl-2xl ${
                   productAmount === 1
-                    ? "border-slate-500 text-slate-border-slate-500"
-                    : "border-dark-green"
+                    ? "bg-slate-500 border-slate-500"
+                    : "bg-dark-green border-dark-green"
                 } h-12 self-center`}
                 disabled={productAmount === 1}
               >
@@ -78,7 +81,7 @@ const BirdName: React.FC<PropType> = (props) => {
               </p>
               <button
                 onClick={() => setProductAmount((prev) => prev + 1)}
-                className="border-2 border-dark-green h-12 self-center"
+                className="border-2 bg-dark-green text-white border-dark-green h-12 self-center rounded-br-2xl rounded-tr-2xl"
               >
                 <Icon path={mdiPlus} size={1} />
               </button>

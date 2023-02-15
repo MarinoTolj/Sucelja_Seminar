@@ -8,7 +8,7 @@ const NavCategories: React.FC<PropType> = (props) => {
   return (
     <nav className="hidden md:flex md:gap-5 md:absolute md:justify-center md:top-20 md:w-full">
       <Link href="/">
-        <Button className="w-20 h-10 pb-1">Home</Button>
+        <Button className="w-32 h-10 pb-1 text-lg">Home</Button>
       </Link>
       {/* <Link href="/Login">
         <Button className="w-20 h-10 pb-1">Login</Button>
@@ -18,7 +18,7 @@ const NavCategories: React.FC<PropType> = (props) => {
       </Link> */}
       {searchCategories.map((category, index) => (
         <Link href={`/${category}`} key={index}>
-          <Button key={index} className="w-20 h-10 pb-1">
+          <Button key={index} className="w-32 h-10 pb-1 text-lg">
             {category}
           </Button>
         </Link>

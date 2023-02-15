@@ -10,26 +10,33 @@ const Categories: React.FC<PropType> = (props) => {
         CATEGORIES
       </p>
       <div className="hidden md:flex md:justify-evenly md:mt-9 md:max-w-2xl md:gap-3 md:m-auto">
-        <Photo
-          src="/photos/Bird1.jpg"
-          alt="Bird1"
-          overlayText="VIEW BIRDS"
-          clickable
-        />
-        <Link href="/Accessories">
+        <div className="relative">
           <Photo
-            src="/photos/BirdCage.jpg"
-            alt="BirdCage"
-            overlayText="VIEW BIRD ACCESSORIES"
+            className="bg-center"
+            src="/photos/Bird1.jpg"
+            alt="Bird1"
+            // overlayText="VIEW BIRDS"
+            clickable
           />
-        </Link>
-        <Link href="/Food">
-          <Photo
-            src="/photos/BirdFood.jpg"
-            alt="BirdFood"
-            overlayText="VIEW BIRD FOOD"
-          />
-        </Link>
+        </div>
+        <div>
+          <Link href="/Accessories">
+            <Photo
+              src="/photos/BirdCage.jpg"
+              alt="BirdCage"
+              // overlayText="VIEW BIRD ACCESSORIES"
+            />
+          </Link>
+        </div>
+        <div>
+          <Link href="/Food">
+            <Photo
+              src="/photos/BirdFood.jpg"
+              alt="BirdFood"
+              // overlayText="VIEW BIRD FOOD"
+            />
+          </Link>
+        </div>
         {/* <Photo src="/photos/Bird1.jpg" alt="Bird1" overlayText="VIEW BIRDS" /> */}
       </div>
     </>

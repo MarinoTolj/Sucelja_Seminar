@@ -1,5 +1,6 @@
 import Image, { ImageProps } from "next/image";
 import Link from "next/link";
+import { LegacyRef } from "react";
 import {
   getBirdNameFromPath,
   photoHeight,
@@ -41,7 +42,7 @@ const Photo: React.FC<
             }}
           />
           {overlayText && (
-            <div className="absolute bottom-0 z-10 text-white text-center bg-text-overlay min-w-full w-fit rounded-br-2xl rounded-bl-2xl">
+            <div className="absolute bottom-0 z-10 text-white text-center bg-text-overlay min-w-full w-fit rounded-br-2xl rounded-bl-2xl text-lg">
               {overlayText}
             </div>
           )}
@@ -60,7 +61,7 @@ const Photo: React.FC<
               }`,
             }}
           />
-          <div className="absolute bottom-0 z-10 text-white text-center bg-text-overlay min-w-full w-fit rounded-br-2xl rounded-bl-2xl">
+          <div className="absolute bottom-0 z-10 text-white text-center bg-text-overlay min-w-full w-fit rounded-br-2xl rounded-bl-2xl text-2xl">
             {overlayText}
           </div>
         </>
