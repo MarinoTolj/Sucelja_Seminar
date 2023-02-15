@@ -19,11 +19,12 @@ type PropType = {
 const BirdName: React.FC<PropType> = (props) => {
   const dispatch = useAppDispatch();
   const [productAmount, setProductAmount] = useState(1);
+  const title = `${props.birdName}} | BuyBirds`;
 
   return (
     <>
       <Head>
-        <title>{props.birdName}</title>
+        <title>{title}</title>
       </Head>
       <div className="text-center">
         <Link href="/Birds" className="text-dark-green font-bold underline">

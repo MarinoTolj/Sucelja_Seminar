@@ -56,18 +56,23 @@ const ShoppingCart: React.FC<PropType> = (props) => {
                     <div className="flex gap-1">
                       <button
                         onClick={() => dispatch(removeProduct(product.name))}
-                        className="border-2 border-black h-12 self-center"
+                        className={`border-2 ${
+                          product.amount === 1
+                            ? "border-slate-500 text-slate-border-slate-500"
+                            : "border-dark-green"
+                        } h-12 self-center`}
+                        disabled={product.amount === 1}
                       >
                         <Icon path={mdiMinus} size={1} />
                       </button>
-                      <p className="self-center text-center text-2xl border-2 border-gray-500 px-3 h-12 pt-1">
+                      <p className="self-center text-center text-2xl border-2 border-main-green-color px-3 h-12 pt-1">
                         {product.amount}
                       </p>
                       <button
                         onClick={() =>
                           dispatch(addProduct({ ...product, amount: 1 }))
                         }
-                        className="border-2 border-black h-12 self-center"
+                        className="border-2 border-dark-green h-12 self-center"
                       >
                         <Icon path={mdiPlus} size={1} />
                       </button>

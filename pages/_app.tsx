@@ -9,10 +9,11 @@ import { Provider } from "react-redux";
 import Head from "next/head";
 
 export default function App({ Component, pageProps }: AppProps) {
+  const title = `${Component.name} | BuyBirds`;
   return (
     <>
       <Head>
-        <title>{Component.name}</title>
+        <title>{title}</title>
       </Head>
       <Provider store={store}>
         <Header />
