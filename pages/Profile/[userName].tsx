@@ -1,3 +1,4 @@
+import Photo from "../../components/photo";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -65,7 +66,7 @@ const UserName: React.FC<PropType> = (props) => {
           </Link>
         </div>
         <div className="absolute left-1/2 right-1/2 w-1/2 flex flex-col">
-          <p>{user.name}</p>
+          <p className="text-4xl">{user.name}</p>
           <Link href="#" className="text-xl text-dark-green underline">
             Change Password
           </Link>
@@ -77,8 +78,65 @@ const UserName: React.FC<PropType> = (props) => {
           </Button>
         </div>
       </div>
-      <div>
-        <h2 className="text-center pt-3 text-2xl bg-beige">MY BIRDS</h2>
+      <div className="mt-10">
+        <div className="">
+          <h2 className="bg-beige pb-3 text-center pt-3 text-5xl mb-5">
+            MY BIRDS
+          </h2>
+          <div className="flex flex-col bg-white mt-3 items-center gap-5 md:flex-row md:flex-wrap md:justify-center">
+            <Photo
+              src={`/photos/Canary.jpg`}
+              alt={"Canary"}
+              overlayText={"Canary"}
+              clickable
+            />
+            <Photo
+              src={`/photos/Crow.jpg`}
+              alt={"Crow"}
+              overlayText={"Crow"}
+              clickable
+            />
+            <Photo
+              src={`/photos/Eagle.jpg`}
+              alt={"Eagle"}
+              overlayText={"Eagle"}
+              clickable
+            />
+            <Photo
+              src={`/photos/Robin.jpg`}
+              alt={"Robin"}
+              overlayText={"Robin"}
+              clickable
+            />
+          </div>
+        </div>
+      </div>
+      <div className="mt-10 mb-10">
+        <h2 className="bg-beige text-center text-4xl mb-10 py-5">
+          Your purchase history
+        </h2>
+        <div className="flex flex-col">
+          <div className="flex justify-between gap-10 bg-dark-green p-5">
+            <p className="text-light-green">Canary, 99€</p>
+            <p className="text-light-green">Date: 14.2</p>
+            <p className="text-light-green">Amount: x1</p>
+          </div>
+          <div className="flex justify-between gap-10 bg-beige p-5">
+            <p className="text-dark-green">Crow, 350€</p>
+            <p className="text-dark-green">Date: 14.2</p>
+            <p className="text-dark-green">Amount: x1</p>
+          </div>
+          <div className="flex justify-between gap-10 bg-dark-green p-5">
+            <p className="text-light-green">Robin, 200€</p>
+            <p className="text-light-green">Date: 13.1</p>
+            <p className="text-light-green">Amount: x2</p>
+          </div>
+          <div className="flex justify-between gap-10 bg-beige p-5">
+            <p className="text-dark-green">Eagle, 400€</p>
+            <p className="text-dark-green">Date: 2.1</p>
+            <p className="text-dark-green">Amount: x1</p>
+          </div>
+        </div>
       </div>
     </>
   );
