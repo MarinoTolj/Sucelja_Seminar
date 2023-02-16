@@ -15,8 +15,16 @@ const Photo: React.FC<
     width?: string;
     customHeight?: string;
     divClassName?: string;
+    productType: "Birds" | "Cages" | "Food";
   }
-> = ({ overlayText, clickable, divClassName, customHeight, ...props }) => {
+> = ({
+  overlayText,
+  clickable,
+  divClassName,
+  customHeight,
+  productType,
+  ...props
+}) => {
   const getPath = () => {
     return getBirdNameFromPath(props.src as string);
   };
@@ -28,7 +36,7 @@ const Photo: React.FC<
       }`}
     >
       {clickable ? (
-        <Link href={`/Birds/${props.alt}`}>
+        <Link href={`/${productType}/${props.alt}`}>
           <Image
             {...props}
             width={photoWidth}

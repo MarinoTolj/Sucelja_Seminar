@@ -11,9 +11,11 @@ export const birdNames = [
   "Eagle",
 ];
 
-export const birdPhotosPaths = birdNames.map((name) => `/photos/${name}.jpg`);
+export const birdPhotosPaths = birdNames.map(
+  (name) => `/photos/birds/${name}.jpg`
+);
 export const getBirdNameFromPath = (path: string) => {
-  const name = path.split("/photos/")[1];
+  const name = path.split("/photos/birds/")[1];
   const foo = name.split(".jpg")[0];
 
   return foo;

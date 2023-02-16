@@ -11,20 +11,23 @@ const Categories: React.FC<PropType> = (props) => {
       </p>
       <div className="hidden md:flex md:justify-evenly md:mt-9 md:max-w-2xl md:gap-3 md:m-auto">
         <div className="relative">
-          <Photo
-            className="bg-center"
-            src="/photos/Bird1.jpg"
-            alt="Bird1"
-            // overlayText="VIEW BIRDS"
-            clickable
-          />
+          <Link href="/Birds">
+            <Photo
+              className="bg-center"
+              src="/photos/Green Parrot.jpg"
+              alt="Green Parrot"
+              overlayText="VIEW BIRDS"
+              productType="Birds"
+            />
+          </Link>
         </div>
         <div>
-          <Link href="/Accessories">
+          <Link href="/Cages">
             <Photo
               src="/photos/BirdCage.jpg"
               alt="BirdCage"
-              // overlayText="VIEW BIRD ACCESSORIES"
+              overlayText="VIEW BIRD ACCESSORIES"
+              productType="Cages"
             />
           </Link>
         </div>
@@ -33,7 +36,8 @@ const Categories: React.FC<PropType> = (props) => {
             <Photo
               src="/photos/BirdFood.jpg"
               alt="BirdFood"
-              // overlayText="VIEW BIRD FOOD"
+              overlayText="VIEW BIRD FOOD"
+              productType="Food"
             />
           </Link>
         </div>

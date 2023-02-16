@@ -28,6 +28,7 @@ const Birds: React.FC<PropType> = (props) => {
                 overlayText={`${getBirdNameFromPath(path)}`}
                 clickable
                 key={index}
+                productType="Birds"
               />
             );
           })}
