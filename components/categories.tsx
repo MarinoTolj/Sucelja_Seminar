@@ -6,8 +6,8 @@ type PropType = {};
 const Categories: React.FC<PropType> = (props) => {
   return (
     <>
-      <p className="hidden md:block md:text-center text-3xl md:mt-10">
-        CATEGORIES
+      <p className="hidden md:block md:text-center text-3xl md:mt-10 bg-beige rounded-2xl w-fit m-auto p-3">
+        Categories
       </p>
       <div className="hidden md:flex md:justify-evenly md:mt-9 md:max-w-2xl md:gap-3 md:m-auto">
         <div className="relative">
@@ -16,7 +16,7 @@ const Categories: React.FC<PropType> = (props) => {
               className="bg-center"
               src="/photos/birds/Green Parrot.jpg"
               alt="Green Parrot"
-              overlayText="VIEW BIRDS"
+              overlayText="View Birds"
               productType="birds"
             />
           </Link>
@@ -26,7 +26,7 @@ const Categories: React.FC<PropType> = (props) => {
             <Photo
               src="/photos/BirdCage.jpg"
               alt="BirdCage"
-              overlayText="VIEW BIRD ACCESSORIES"
+              overlayText="View Bird Cages"
               productType="cages"
             />
           </Link>
@@ -34,9 +34,9 @@ const Categories: React.FC<PropType> = (props) => {
         <div>
           <Link href="/Food">
             <Photo
-              src="/photos/BirdFood.jpg"
+              src="/photos/food/Berries.jpg"
               alt="BirdFood"
-              overlayText="VIEW BIRD FOOD"
+              overlayText="View Bird Food"
               productType="food"
             />
           </Link>

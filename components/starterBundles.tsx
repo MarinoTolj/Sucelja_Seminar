@@ -3,8 +3,8 @@ import Photo from "./photo";
 const StarterBundles = () => {
   return (
     <>
-      <div className="bg-beige h-full mt-9">
-        <h2 className="text-center text-2xl">
+      <div className=" h-full mt-9">
+        <h2 className="bg-beige m-auto mb-3 text-center text-2xl rounded-2xl w-fit p-3">
           Our bundles offer a great deal!
         </h2>
       </div>
@@ -18,7 +18,7 @@ const StarterBundles = () => {
               loading="eager"
               overlayText="Robin + cage + food = 500€"
               clickable
-              productType="Birds"
+              productType="birds"
             />
           </div>
         </div>
