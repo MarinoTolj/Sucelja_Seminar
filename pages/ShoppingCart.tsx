@@ -61,12 +61,7 @@ const ShoppingCart: React.FC<PropType> = (props) => {
                       <button
                         aria-label="reduce-product-amount-by-one"
                         onClick={() => dispatch(removeProduct(product.name))}
-                        className={`border-2 rounded-bl-2xl  text-white rounded-tl-2xl ${
-                          product.amount === 1
-                            ? "bg-slate-500 border-slate-500"
-                            : "bg-dark-green border-dark-green"
-                        } h-12 self-center`}
-                        disabled={product.amount === 1}
+                        className={`border-2 rounded-bl-2xl  text-white rounded-tl-2xl bg-dark-green border-dark-green h-12 self-center`}
                       >
                         <Icon path={mdiMinus} size={1} />
                       </button>

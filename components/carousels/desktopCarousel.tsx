@@ -1,15 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 import { birdPhotosPaths, getBirdNameFromPath } from "../../helpers/constants";
 import useHover from "../../helpers/useHover";
 import Photo from "../photo";
 
-const currentPhotoActiveTime = 3;
-
 type PropType = {};
 
 const DesktopCarousel: React.FC<PropType> = (props) => {
-  const [timer, setTimer] = useState(currentPhotoActiveTime);
-  const [currentPhoto, setCurrentPhoto] = useState(0);
   const [ref1, isHovered1] = useHover<HTMLDivElement>();
   const [ref2, isHovered2] = useHover<HTMLDivElement>();
   const [ref3, isHovered3] = useHover<HTMLDivElement>();
@@ -17,16 +13,12 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
   const [ref5, isHovered5] = useHover<HTMLDivElement>();
   const [ref6, isHovered6] = useHover<HTMLDivElement>();
 
-  useEffect(() => {
-    if (isHovered1) console.log("Ode");
-  }, [ref1, isHovered1]);
-
   return (
     <div className="hidden md:grid md:grid-cols-2Cols md:grid-rows-3 md:mt-20 md:w-3/5 md:m-auto gap-3">
       {isHovered1 ? (
         <Photo
           src={birdPhotosPaths[0]}
-          alt={`GreenParrot`}
+          alt={`Green Parrot`}
           clickable
           overlayText={`Green Parrot`}
           divClassName="row-span-full max-w-md"
@@ -36,7 +28,7 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
       ) : isHovered2 ? (
         <Photo
           src={birdPhotosPaths[1]}
-          alt={`WhiteParrot`}
+          alt={`White Parrot`}
           clickable
           overlayText={`White Parrot`}
           divClassName="row-span-full max-w-md"
@@ -86,7 +78,7 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
       ) : (
         <Photo
           src={birdPhotosPaths[0]}
-          alt={`GreenParrot`}
+          alt={`Green Parrot`}
           clickable
           overlayText={`Green Parrot`}
           divClassName="row-span-full max-w-md"

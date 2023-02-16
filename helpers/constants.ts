@@ -3,8 +3,8 @@ export const photoHeight = "240";
 export const searchCategories = ["Birds", "Food", "Cages", "Other"];
 
 export const birdNames = [
-  "GreenParrot",
-  "WhiteParrot",
+  "Green Parrot",
+  "White Parrot",
   "Crow",
   "Robin",
   "Canary",
@@ -13,7 +13,8 @@ export const birdNames = [
 
 export const birdPhotosPaths = birdNames.map((name) => `/photos/${name}.jpg`);
 export const getBirdNameFromPath = (path: string) => {
-  const name = path.match(/(Bird)\d+/g);
+  const name = path.split("/photos/")[1];
+  const foo = name.split(".jpg")[0];
 
-  return name;
+  return foo;
 };
