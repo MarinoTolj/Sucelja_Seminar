@@ -37,7 +37,7 @@ export const getFoodNameFromPath = (path: string) => {
   const name = path.split("/photos/food/")[1];
   const foo = name.split(".jpg")[0];
 
-  return foo;
+  return foo[0].toUpperCase + foo.slice(1);
 };
 
 export const cageNames = [
@@ -56,7 +56,7 @@ export const getCageNameFromPath = (path: string) => {
   const name = path.split("/photos/cages/")[1];
   const foo = name.split(".jpg")[0];
 
-  return foo;
+  return foo[0].toUpperCase + foo.slice(1);
 };
 
 export const otherNames = [
@@ -75,5 +75,5 @@ export const getOtherNameFromPath = (path: string) => {
   const name = path.split("/photos/others/")[1];
   const foo = name.split(".jpg")[0];
 
-  return foo;
+  return foo[0].toUpperCase + foo.slice(1);
 };
