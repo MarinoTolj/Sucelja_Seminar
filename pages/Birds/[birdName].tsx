@@ -64,7 +64,7 @@ const BirdName: React.FC<PropType> = (props) => {
                 )
               }
             >
-              ADD TO CART
+              Add to cart
             </Button>
             <div className="flex gap-1 mb-16 justify-center">
               <button
