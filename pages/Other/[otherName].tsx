@@ -34,7 +34,7 @@ const OtherName: React.FC<PropType> = (props) => {
       </div>
       <div className="flex gap-3 items-center flex-col mt-3 md:flex-row md:m-auto md:gap-10">
         <Photo
-          src={`/photos/others/${props.otherName}.jpg`}
+          src={`/photos/other/${props.otherName}.jpg`}
           alt={props.otherName}
           overlayText={props.otherName}
           productType="other"

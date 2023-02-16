@@ -69,10 +69,10 @@ export const otherNames = [
 ];
 
 export const otherPhotosPaths = otherNames.map(
-  (name) => `/photos/others/${name}.jpg`
+  (name) => `/photos/other/${name}.jpg`
 );
 export const getOtherNameFromPath = (path: string) => {
-  const name = path.split("/photos/others/")[1];
+  const name = path.split("/photos/other/")[1];
   const foo = name.split(".jpg")[0];
 
   return foo[0].toUpperCase() + foo.slice(1);
