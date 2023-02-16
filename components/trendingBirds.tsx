@@ -8,7 +8,7 @@ const TrendingBirds = () => {
       </h3>
       <div className="mt-9 flex  items-center flex-col gap-3 md:flex-row md:justify-center md:flex-wrap md:w-3/5 md:m-auto md:mt-5">
         <Photo
-          src="/photos/Birds/Green Parrot.jpg"
+          src="/photos/birds/Green Parrot.jpg"
           alt={`Green Parrot`}
           loading="eager"
           overlayText="Green Parrot"
@@ -16,7 +16,7 @@ const TrendingBirds = () => {
           productType="birds"
         />
         <Photo
-          src="/photos/Birds/White Parrot.jpg"
+          src="/photos/birds/White Parrot.jpg"
           alt={`White Parrot`}
           loading="eager"
           overlayText="White Parrot"
@@ -24,7 +24,7 @@ const TrendingBirds = () => {
           productType="birds"
         />
         <Photo
-          src="/photos/Birds/Robin.jpg"
+          src="/photos/birds/Robin.jpg"
           alt={`Robin`}
           loading="eager"
           overlayText="Robin"
@@ -32,7 +32,7 @@ const TrendingBirds = () => {
           productType="birds"
         />
         <Photo
-          src="/photos/Birds/Eagle.jpg"
+          src="/photos/birds/Eagle.jpg"
           alt={`Eagle`}
           loading="eager"
           overlayText="Eagle"
@@ -40,7 +40,7 @@ const TrendingBirds = () => {
           productType="birds"
         />
         <Photo
-          src="/photos/cages/Brown Cage.jpg"
+          src="/photos/cages/Brown cage.jpg"
           alt={`Brown Cage`}
           loading="eager"
           overlayText="Brown Cage"

@@ -26,7 +26,7 @@ const StarterBundles = () => {
           <h3 className="text-center">The crow bundle</h3>
           <div className="m-auto">
             <Photo
-              src="/photos/Birds/Crow.jpg"
+              src="/photos/birds/Crow.jpg"
               alt={`Crow`}
               loading="eager"
               overlayText="Crow + cage + food = 400€"
