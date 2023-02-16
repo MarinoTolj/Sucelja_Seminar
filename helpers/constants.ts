@@ -17,3 +17,21 @@ export const getBirdNameFromPath = (path: string) => {
 
   return name;
 };
+
+export const foodNames = [
+  "Apples",
+  "Berries",
+  "Corn",
+  "Fish",
+  "Rye",
+  "Sunflower",
+];
+
+export const foodPhotosPaths = birdNames.map(
+  (name) => `/photos/food/${name}.jpg`
+);
+export const getFoodNameFromPath = (path: string) => {
+  const name = path.match(/(Bird)\d+/g);
+
+  return name;
+};
