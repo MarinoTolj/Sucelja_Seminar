@@ -32,9 +32,10 @@ export const foodPhotosPaths = foodNames.map(
   (name) => `/photos/food/${name}.jpg`
 );
 export const getFoodNameFromPath = (path: string) => {
-  const name = path.match(/(Bird)\d+/g);
+  const name = path.split("/photos/food/")[1];
+  const foo = name.split(".jpg")[0];
 
-  return name;
+  return foo;
 };
 
 export const cageNames = [
@@ -50,7 +51,8 @@ export const cagePhotosPaths = cageNames.map(
   (name) => `/photos/cages/${name}.jpg`
 );
 export const getCageNameFromPath = (path: string) => {
-  const name = path.match(/(Bird)\d+/g);
+  const name = path.split("/photos/cages/")[1];
+  const foo = name.split(".jpg")[0];
 
-  return name;
+  return foo;
 };
