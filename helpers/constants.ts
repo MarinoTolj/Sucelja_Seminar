@@ -56,3 +56,22 @@ export const getCageNameFromPath = (path: string) => {
 
   return foo;
 };
+
+export const otherNames = [
+  "Blue fluff",
+  "Brown fluff",
+  "Pink fluff",
+  "Scarecrow",
+  "Toy birds",
+  "Whistle",
+];
+
+export const otherPhotosPaths = otherNames.map(
+  (name) => `/photos/others/${name}.jpg`
+);
+export const getOtherNameFromPath = (path: string) => {
+  const name = path.split("/photos/others/")[1];
+  const foo = name.split(".jpg")[0];
+
+  return foo;
+};
