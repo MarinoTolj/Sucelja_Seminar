@@ -7,19 +7,19 @@ import { useState } from "react";
 import Button from "../../components/button";
 import StarRating from "../../components/icons/starRating";
 import Photo from "../../components/photo";
-import { cageNames } from "../../helpers/constants";
+import { otherNames } from "../../helpers/constants";
 
 import { useAppDispatch } from "../../redux/hooks";
 import { addProduct } from "../../redux/products";
 
 type PropType = {
-  cageName: string;
+  otherName: string;
 };
 
-const CageName: React.FC<PropType> = (props) => {
+const OtherName: React.FC<PropType> = (props) => {
   const dispatch = useAppDispatch();
   const [productAmount, setProductAmount] = useState(1);
-  const title = `${props.cageName} | BuyBirds`;
+  const title = `${props.otherName} | BuyBirds`;
 
   return (
     <>
@@ -30,19 +30,19 @@ const CageName: React.FC<PropType> = (props) => {
         <Link href="/Birds" className="text-dark-green font-bold underline">
           Birds
         </Link>
-        <span>/{props.cageName}</span>
+        <span>/{props.otherName}</span>
       </div>
       <div className="flex gap-3 items-center flex-col mt-3 md:flex-row md:m-auto md:gap-10">
         <Photo
-          src={`/photos/Cages/${props.cageName}.jpg`}
-          alt={props.cageName}
-          overlayText={props.cageName}
-          productType="Cages"
+          src={`/photos/others/${props.otherName}.jpg`}
+          alt={props.otherName}
+          overlayText={props.otherName}
+          productType="Other"
         />
         <div className="flex items-center flex-col w-60 md:w-auto">
           <div className="self-start md:mb-10">
             <p className="hidden md:block mb-5 text-5xl font-extrabold">
-              {props.cageName}
+              {props.otherName}
             </p>
             <p className="mb-5 text-lg">Price: 300€</p>
             <div className="flex gap-1 text-lg">
@@ -56,10 +56,10 @@ const CageName: React.FC<PropType> = (props) => {
               onClick={() =>
                 dispatch(
                   addProduct({
-                    name: props.cageName,
+                    name: props.otherName,
                     price: 300,
                     amount: productAmount,
-                    productType: "Cages",
+                    productType: "Other",
                   })
                 )
               }
@@ -96,13 +96,13 @@ const CageName: React.FC<PropType> = (props) => {
     </>
   );
 };
-export default CageName;
+export default OtherName;
 
 export async function getStaticPaths() {
-  const paths = cageNames.map((name) => {
+  const paths = otherNames.map((name) => {
     return {
       params: {
-        cageName: name,
+        otherName: name,
       },
     };
   });
@@ -118,11 +118,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
   if (context.params !== undefined) {
     return {
       // Passed to the page component as props
-      props: { cageName: context.params.cageName },
+      props: { otherName: context.params.otherName },
     };
   }
   return {
     // Passed to the page component as props
-    props: { cageName: "" },
+    props: { otherName: "" },
   };
 };
