@@ -55,8 +55,8 @@ const UserName: React.FC<PropType> = (props) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <h2 className="text-center pt-3 text-2xl bg-beige">MY DASHBOARD</h2>
-      <div className="bg-beige pt-3 flex justify-between relative">
+      <h2 className="bg-beige text-center text-4xl mb-10 py-5">My dashboard</h2>
+      <div className="bg-white pt-3 flex justify-between relative">
         <div className="flex flex-col items-center mr-auto mb-5">
           <div>
             <AccountIcon size={4} />
@@ -80,9 +80,7 @@ const UserName: React.FC<PropType> = (props) => {
       </div>
       <div className="mt-10">
         <div className="">
-          <h2 className="bg-beige pb-3 text-center pt-3 text-5xl mb-5">
-            MY BIRDS
-          </h2>
+          <h2 className="bg-beige text-center text-4xl mb-10 py-5">My birds</h2>
           <div className="flex flex-col bg-white mt-3 items-center gap-5 md:flex-row md:flex-wrap md:justify-center">
             <Photo
               src={`/photos/Canary.jpg`}
@@ -113,7 +111,7 @@ const UserName: React.FC<PropType> = (props) => {
       </div>
       <div className="mt-10 mb-10">
         <h2 className="bg-beige text-center text-4xl mb-10 py-5">
-          Your purchase history
+          My purchase history
         </h2>
         <div className="flex flex-col">
           <div className="flex justify-between gap-10 bg-dark-green p-5">
@@ -121,7 +119,7 @@ const UserName: React.FC<PropType> = (props) => {
             <p className="text-light-green">Date: 14.2</p>
             <p className="text-light-green">Amount: x1</p>
           </div>
-          <div className="flex justify-between gap-10 bg-beige p-5">
+          <div className="flex justify-between gap-10 bg-white p-5">
             <p className="text-dark-green">Crow, 350€</p>
             <p className="text-dark-green">Date: 14.2</p>
             <p className="text-dark-green">Amount: x1</p>
@@ -131,7 +129,7 @@ const UserName: React.FC<PropType> = (props) => {
             <p className="text-light-green">Date: 13.1</p>
             <p className="text-light-green">Amount: x2</p>
           </div>
-          <div className="flex justify-between gap-10 bg-beige p-5">
+          <div className="flex justify-between gap-10 bg-white p-5">
             <p className="text-dark-green">Eagle, 400€</p>
             <p className="text-dark-green">Date: 2.1</p>
             <p className="text-dark-green">Amount: x1</p>

@@ -17,7 +17,7 @@ const ShoppingCart: React.FC<PropType> = (props) => {
       <Head>
         <title>Shopping cart | BuyBirds</title>
       </Head>
-      <h2 className="text-center mt-4 text-xl">
+      <h2 className="text-center mt-5 py-1 border-2 border-beige rounded-2xl m-auto text-xl bg-beige w-fit px-2">
         Your Total:
         {products.reduce(
           (acc, product) => product.price * product.amount + acc,
@@ -30,7 +30,7 @@ const ShoppingCart: React.FC<PropType> = (props) => {
           {products.length === 0 ? (
             <div className="text-center flex flex-col items-center">
               <Icon path={mdiEmoticonCryOutline} size={3} />
-              <p className=" mt-2">YOUR CART IS EMPTY.</p>
+              <p className=" mt-2">Your cart is empty.</p>
               <Link href="/Birds" className="text-dark-green underline">
                 Continue shopping
               </Link>
@@ -48,7 +48,7 @@ const ShoppingCart: React.FC<PropType> = (props) => {
                         customHeight="93px"
                       />
                     </div>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col md:mx-5">
                       <p className="text-2xl">{product.name}</p>
                       <p className="font-semibold">{product.price}€</p>
                       <div className="flex gap-2">
