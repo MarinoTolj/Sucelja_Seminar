@@ -40,7 +40,7 @@ const MobileCarousel = () => {
               loading="eager"
               hidden
               overlayText="hidden"
-              productType="Birds"
+              productType="birds"
             />
           );
         }
@@ -55,7 +55,7 @@ const MobileCarousel = () => {
             loading="eager"
             overlayText={`${getBirdNameFromPath(src)}`}
             clickable={index === 1}
-            productType="Birds"
+            productType="birds"
           />
         );
       })}

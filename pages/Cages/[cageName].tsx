@@ -37,7 +37,7 @@ const CageName: React.FC<PropType> = (props) => {
           src={`/photos/Cages/${props.cageName}.jpg`}
           alt={props.cageName}
           overlayText={props.cageName}
-          productType="Cages"
+          productType="cages"
         />
         <div className="flex items-center flex-col w-60 md:w-auto">
           <div className="self-start md:mb-10">
@@ -59,7 +59,7 @@ const CageName: React.FC<PropType> = (props) => {
                     name: props.cageName,
                     price: 300,
                     amount: productAmount,
-                    productType: "Cages",
+                    productType: "cages",
                   })
                 )
               }

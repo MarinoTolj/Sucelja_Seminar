@@ -31,7 +31,7 @@ const Other: React.FC<PropType> = (props) => {
                 overlayText={`${getOtherNameFromPath(path)}`}
                 clickable
                 key={index}
-                productType="Other"
+                productType="other"
               />
             );
           })}

@@ -15,7 +15,7 @@ const Photo: React.FC<
     width?: string;
     customHeight?: string;
     divClassName?: string;
-    productType: "Birds" | "Cages" | "Food" | "Other";
+    productType: "birds" | "cages" | "food" | "other";
   }
 > = ({
   overlayText,
@@ -36,7 +36,11 @@ const Photo: React.FC<
       }`}
     >
       {clickable ? (
-        <Link href={`/${productType}/${props.alt}`}>
+        <Link
+          href={`/${
+            productType[0].toLocaleUpperCase() + productType.slice(1)
+          }/${props.alt}`}
+        >
           <Image
             {...props}
             width={photoWidth}

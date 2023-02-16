@@ -13,7 +13,7 @@ const StarterBundles = () => {
           <h3 className="text-center">The robin bundle</h3>
           <div className="m-auto">
             <Photo
-              src="/photos/Birds/Robin.jpg"
+              src="/photos/birds/Robin.jpg"
               alt={`Robin`}
               loading="eager"
               overlayText="Robin + cage + food = 500€"
@@ -31,7 +31,7 @@ const StarterBundles = () => {
               loading="eager"
               overlayText="Crow + cage + food = 400€"
               clickable
-              productType="Birds"
+              productType="birds"
             />
           </div>
         </div>

@@ -34,10 +34,10 @@ const OtherName: React.FC<PropType> = (props) => {
       </div>
       <div className="flex gap-3 items-center flex-col mt-3 md:flex-row md:m-auto md:gap-10">
         <Photo
-          src={`/photos/others/${props.otherName}.jpg`}
+          src={`/photos/other/${props.otherName}.jpg`}
           alt={props.otherName}
           overlayText={props.otherName}
-          productType="Other"
+          productType="other"
         />
         <div className="flex items-center flex-col w-60 md:w-auto">
           <div className="self-start md:mb-10">
@@ -59,7 +59,7 @@ const OtherName: React.FC<PropType> = (props) => {
                     name: props.otherName,
                     price: 300,
                     amount: productAmount,
-                    productType: "Other",
+                    productType: "other",
                   })
                 )
               }
