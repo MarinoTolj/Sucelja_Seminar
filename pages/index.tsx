@@ -13,9 +13,9 @@ export default function Home() {
       <Categories />
       <StarterBundles />
       <TrendingBirds />
-      <div className="flex justify-center w-full h-20">
+      {/* <div className="flex justify-center w-full h-20">
         <Button className="w-5/6">WHATS NEW</Button>
-      </div>
+      </div> */}
     </div>
   );
 }
