@@ -42,10 +42,11 @@ const ShoppingCart: React.FC<PropType> = (props) => {
                   <div className="mt-3 flex justify-between mx-2" key={index}>
                     <div className="w-16 h-16">
                       <Photo
-                        src={`/photos/${product.name}.jpg`}
+                        src={`/photos/${product.productType}/${product.name}.jpg`}
                         alt={product.name}
                         clickable
                         customHeight="93px"
+                        productType="Cages"
                       />
                     </div>
                     <div className="flex flex-col md:mx-5">

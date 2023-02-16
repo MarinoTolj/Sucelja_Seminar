@@ -28,6 +28,7 @@ const Food: React.FC<PropType> = (props) => {
                 overlayText={`${getFoodNameFromPath(path)}`}
                 clickable
                 key={index}
+                productType="Food"
               />
             );
           })}

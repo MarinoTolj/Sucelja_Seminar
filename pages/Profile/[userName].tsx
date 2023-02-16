@@ -87,24 +87,28 @@ const UserName: React.FC<PropType> = (props) => {
               alt={"Canary"}
               overlayText={"Canary"}
               clickable
+              productType="Birds"
             />
             <Photo
               src={`/photos/Crow.jpg`}
               alt={"Crow"}
               overlayText={"Crow"}
               clickable
+              productType="Birds"
             />
             <Photo
               src={`/photos/Eagle.jpg`}
               alt={"Eagle"}
               overlayText={"Eagle"}
               clickable
+              productType="Birds"
             />
             <Photo
               src={`/photos/Robin.jpg`}
               alt={"Robin"}
               overlayText={"Robin"}
               clickable
+              productType="Birds"
             />
           </div>
         </div>
