@@ -10,6 +10,7 @@ const TrendingBirds = () => {
         loading="eager"
         overlayText="Bird Name"
         clickable
+        productType="Birds"
       />
       <Photo
         src="/photos/Bird3.jpg"
@@ -17,6 +18,7 @@ const TrendingBirds = () => {
         loading="eager"
         overlayText="Bird Name"
         clickable
+        productType="Birds"
       />
     </div>
   );

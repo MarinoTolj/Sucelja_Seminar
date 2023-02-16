@@ -15,7 +15,7 @@ const Photo: React.FC<
     width?: string;
     customHeight?: string;
     divClassName?: string;
-    productType: "Birds" | "Cages" | "Food";
+    productType: "Birds" | "Cages" | "Food" | "Other";
   }
 > = ({
   overlayText,

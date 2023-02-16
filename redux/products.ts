@@ -5,7 +5,7 @@ export type ProductType = {
   name: string;
   price: number;
   amount: number;
-  productType: "Birds" | "Cages" | "Food";
+  productType: "Birds" | "Cages" | "Food" | "Other";
 };
 
 const findProductInArray = (product: ProductType, array: ProductType[]) => {
