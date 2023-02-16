@@ -83,28 +83,28 @@ const UserName: React.FC<PropType> = (props) => {
           <h2 className="bg-beige text-center text-4xl mb-10 py-5">My birds</h2>
           <div className="flex flex-col bg-white mt-3 items-center gap-5 md:flex-row md:flex-wrap md:justify-center">
             <Photo
-              src={`/photos/Canary.jpg`}
+              src={`/photos/birds/Canary.jpg`}
               alt={"Canary"}
               overlayText={"Canary"}
               clickable
               productType="Birds"
             />
             <Photo
-              src={`/photos/Crow.jpg`}
+              src={`/photos/birds/Crow.jpg`}
               alt={"Crow"}
               overlayText={"Crow"}
               clickable
               productType="Birds"
             />
             <Photo
-              src={`/photos/Eagle.jpg`}
+              src={`/photos/birds/Eagle.jpg`}
               alt={"Eagle"}
               overlayText={"Eagle"}
               clickable
               productType="Birds"
             />
             <Photo
-              src={`/photos/Robin.jpg`}
+              src={`/photos/birds/Robin.jpg`}
               alt={"Robin"}
               overlayText={"Robin"}
               clickable

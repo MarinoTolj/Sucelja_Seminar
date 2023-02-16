@@ -14,7 +14,7 @@ const Categories: React.FC<PropType> = (props) => {
           <Link href="/Birds">
             <Photo
               className="bg-center"
-              src="/photos/Green Parrot.jpg"
+              src="/photos/birds/Green Parrot.jpg"
               alt="Green Parrot"
               overlayText="VIEW BIRDS"
               productType="Birds"

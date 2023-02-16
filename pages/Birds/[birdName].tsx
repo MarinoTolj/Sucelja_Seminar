@@ -34,7 +34,7 @@ const BirdName: React.FC<PropType> = (props) => {
       </div>
       <div className="flex gap-3 items-center flex-col mt-3 md:flex-row md:m-auto md:gap-10">
         <Photo
-          src={`/photos/${props.birdName}.jpg`}
+          src={`/photos/birds/${props.birdName}.jpg`}
           alt={props.birdName}
           overlayText={props.birdName}
           productType="Birds"

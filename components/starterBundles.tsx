@@ -7,7 +7,7 @@ const StarterBundles = () => {
       <h3 className="text-center">BUNDLE #1</h3>
       <div className="flex justify-center">
         <Photo
-          src="/photos/Bird1.jpg"
+          src="/photos/birds/Bird1.jpg"
           alt={`Bird1`}
           loading="eager"
           overlayText="Bird Name PARROT + CAGE + FOOD=500€"
