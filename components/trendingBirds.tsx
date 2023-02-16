@@ -6,7 +6,7 @@ const TrendingBirds = () => {
       <h3 className="bg-beige text-2xl rounded-2xl p-3 text-center w-fit m-auto">
         Trending
       </h3>
-      <div className="mt-9 flex  items-center flex-col gap-3 md:flex-row md:justify-center md:flex-wrap">
+      <div className="mt-9 flex  items-center flex-col gap-3 md:flex-row md:justify-center md:flex-wrap md:w-3/5 md:m-auto md:mt-5">
         <Photo
           src="/photos/Birds/Green Parrot.jpg"
           alt={`Green Parrot`}
