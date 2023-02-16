@@ -28,7 +28,7 @@ const Cages: React.FC<PropType> = (props) => {
                 overlayText={`${getCageNameFromPath(path)}`}
                 clickable
                 key={index}
-                productType="Cages"
+                productType="cages"
               />
             );
           })}

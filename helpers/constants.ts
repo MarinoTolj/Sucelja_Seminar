@@ -12,10 +12,10 @@ export const birdNames = [
 ];
 
 export const birdPhotosPaths = birdNames.map(
-  (name) => `/photos/Birds/${name}.jpg`
+  (name) => `/photos/birds/${name}.jpg`
 );
 export const getBirdNameFromPath = (path: string) => {
-  const name = path.split("/photos/Birds/")[1];
+  const name = path.split("/photos/birds/")[1];
   const foo = name.split(".jpg")[0];
 
   return foo;
@@ -31,10 +31,10 @@ export const foodNames = [
 ];
 
 export const foodPhotosPaths = foodNames.map(
-  (name) => `/photos/Food/${name}.jpg`
+  (name) => `/photos/food/${name}.jpg`
 );
 export const getFoodNameFromPath = (path: string) => {
-  const name = path.split("/photos/Food/")[1];
+  const name = path.split("/photos/food/")[1];
   const foo = name.split(".jpg")[0];
 
   return foo;
@@ -50,10 +50,10 @@ export const cageNames = [
 ];
 
 export const cagePhotosPaths = cageNames.map(
-  (name) => `/photos/Cages/${name}.jpg`
+  (name) => `/photos/cages/${name}.jpg`
 );
 export const getCageNameFromPath = (path: string) => {
-  const name = path.split("/photos/Cages/")[1];
+  const name = path.split("/photos/cages/")[1];
   const foo = name.split(".jpg")[0];
 
   return foo;
@@ -69,10 +69,10 @@ export const otherNames = [
 ];
 
 export const otherPhotosPaths = otherNames.map(
-  (name) => `/photos/Others/${name}.jpg`
+  (name) => `/photos/others/${name}.jpg`
 );
 export const getOtherNameFromPath = (path: string) => {
-  const name = path.split("/photos/Others/")[1];
+  const name = path.split("/photos/others/")[1];
   const foo = name.split(".jpg")[0];
 
   return foo;

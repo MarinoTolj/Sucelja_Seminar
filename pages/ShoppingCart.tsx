@@ -46,7 +46,7 @@ const ShoppingCart: React.FC<PropType> = (props) => {
                         alt={product.name}
                         clickable
                         customHeight="93px"
-                        productType="Cages"
+                        productType="cages"
                       />
                     </div>
                     <div className="flex flex-col md:mx-5">

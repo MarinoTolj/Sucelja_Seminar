@@ -24,7 +24,7 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
           divClassName="row-span-full max-w-md"
           className="w-full min-w-full"
           customHeight="100%"
-          productType="Birds"
+          productType="birds"
         />
       ) : isHovered2 ? (
         <Photo
@@ -35,7 +35,7 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
           divClassName="row-span-full max-w-md"
           className="w-full min-w-full"
           customHeight="100%"
-          productType="Birds"
+          productType="birds"
         />
       ) : isHovered3 ? (
         <Photo
@@ -46,7 +46,7 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
           divClassName="row-span-full max-w-md"
           className="w-full"
           customHeight="100%"
-          productType="Birds"
+          productType="birds"
         />
       ) : isHovered4 ? (
         <Photo
@@ -57,7 +57,7 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
           divClassName="row-span-full max-w-md"
           className="w-full"
           customHeight="100%"
-          productType="Birds"
+          productType="birds"
         />
       ) : isHovered5 ? (
         <Photo
@@ -68,7 +68,7 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
           divClassName="row-span-full max-w-md"
           className="w-full"
           customHeight="100%"
-          productType="Birds"
+          productType="birds"
         />
       ) : isHovered6 ? (
         <Photo
@@ -79,7 +79,7 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
           divClassName="row-span-full max-w-md"
           className="w-full"
           customHeight="100%"
-          productType="Birds"
+          productType="birds"
         />
       ) : (
         <Photo
@@ -90,7 +90,7 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
           divClassName="row-span-full max-w-md"
           className="w-full min-w-full"
           customHeight="100%"
-          productType="Birds"
+          productType="birds"
         />
       )}
 
@@ -102,7 +102,7 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
           overlayText={`Green Parrot`}
           customHeight="213px"
           divClassName="max-w-max"
-          productType="Birds"
+          productType="birds"
         />
       </div>
       <div ref={ref2}>
@@ -113,7 +113,7 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
           overlayText={`White Parrot`}
           customHeight="213px"
           divClassName="max-w-max"
-          productType="Birds"
+          productType="birds"
         />
       </div>
       <div ref={ref3}>
@@ -124,7 +124,7 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
           overlayText={`Crow`}
           customHeight="213px"
           divClassName="max-w-max"
-          productType="Birds"
+          productType="birds"
         />
       </div>
       <div ref={ref4}>
@@ -135,7 +135,7 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
           overlayText={`Robin`}
           customHeight="213px"
           divClassName="max-w-max"
-          productType="Birds"
+          productType="birds"
         />
       </div>
       <div ref={ref5}>
@@ -146,7 +146,7 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
           overlayText={`Canary`}
           customHeight="213px"
           divClassName="max-w-max"
-          productType="Birds"
+          productType="birds"
         />
       </div>
       <div ref={ref6}>
@@ -157,7 +157,7 @@ const DesktopCarousel: React.FC<PropType> = (props) => {
           overlayText={`Eagle`}
           customHeight="213px"
           divClassName="max-w-max"
-          productType="Birds"
+          productType="birds"
         />
       </div>
     </div>

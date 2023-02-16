@@ -17,7 +17,7 @@ const Categories: React.FC<PropType> = (props) => {
               src="/photos/birds/Green Parrot.jpg"
               alt="Green Parrot"
               overlayText="VIEW BIRDS"
-              productType="Birds"
+              productType="birds"
             />
           </Link>
         </div>
@@ -27,7 +27,7 @@ const Categories: React.FC<PropType> = (props) => {
               src="/photos/BirdCage.jpg"
               alt="BirdCage"
               overlayText="VIEW BIRD ACCESSORIES"
-              productType="Cages"
+              productType="cages"
             />
           </Link>
         </div>
@@ -37,7 +37,7 @@ const Categories: React.FC<PropType> = (props) => {
               src="/photos/BirdFood.jpg"
               alt="BirdFood"
               overlayText="VIEW BIRD FOOD"
-              productType="Food"
+              productType="food"
             />
           </Link>
         </div>
